@@ -30,25 +30,26 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvPB = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cbbTP = new System.Windows.Forms.ComboBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnRspb = new System.Windows.Forms.Button();
             this.btnXoapb = new System.Windows.Forms.Button();
             this.btnSuapb = new System.Windows.Forms.Button();
             this.btnThempb = new System.Windows.Forms.Button();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.txbTenpb = new System.Windows.Forms.TextBox();
-            this.txbMapb = new System.Windows.Forms.TextBox();
+            this.txtTenpb = new System.Windows.Forms.TextBox();
+            this.txtMapb = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txbSDT = new System.Windows.Forms.TextBox();
-            this.cbbTP = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -69,16 +70,17 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.splitContainer1.Panel2.Controls.Add(this.cbbTP);
-            this.splitContainer1.Panel2.Controls.Add(this.txbSDT);
+            this.splitContainer1.Panel2.Controls.Add(this.txtSDT);
             this.splitContainer1.Panel2.Controls.Add(this.label5);
             this.splitContainer1.Panel2.Controls.Add(this.btnRspb);
             this.splitContainer1.Panel2.Controls.Add(this.btnXoapb);
             this.splitContainer1.Panel2.Controls.Add(this.btnSuapb);
             this.splitContainer1.Panel2.Controls.Add(this.btnThempb);
             this.splitContainer1.Panel2.Controls.Add(this.txtDiaChi);
-            this.splitContainer1.Panel2.Controls.Add(this.txbTenpb);
-            this.splitContainer1.Panel2.Controls.Add(this.txbMapb);
+            this.splitContainer1.Panel2.Controls.Add(this.txtTenpb);
+            this.splitContainer1.Panel2.Controls.Add(this.txtMapb);
             this.splitContainer1.Panel2.Controls.Add(this.label4);
             this.splitContainer1.Panel2.Controls.Add(this.label3);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
@@ -89,7 +91,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.listView1);
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.groupBox1.Controls.Add(this.lvPB);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -99,20 +102,74 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hợp đồng lao động";
             // 
-            // listView1
+            // lvPB
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvPB.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
-            this.columnHeader4});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Location = new System.Drawing.Point(3, 28);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(999, 335);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.columnHeader4,
+            this.columnHeader5});
+            this.lvPB.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvPB.FullRowSelect = true;
+            this.lvPB.Location = new System.Drawing.Point(3, 28);
+            this.lvPB.Name = "lvPB";
+            this.lvPB.Size = new System.Drawing.Size(999, 335);
+            this.lvPB.TabIndex = 0;
+            this.lvPB.UseCompatibleStateImageBehavior = false;
+            this.lvPB.View = System.Windows.Forms.View.Details;
+            this.lvPB.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Mã Phòng Ban";
+            this.columnHeader1.Width = 160;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Tên Phòng Ban";
+            this.columnHeader2.Width = 171;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Mã Trưởng Phòng";
+            this.columnHeader3.Width = 211;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Địa chỉ";
+            this.columnHeader4.Width = 242;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Số Điện Thoại";
+            this.columnHeader5.Width = 166;
+            // 
+            // cbbTP
+            // 
+            this.cbbTP.FormattingEnabled = true;
+            this.cbbTP.Location = new System.Drawing.Point(189, 156);
+            this.cbbTP.Name = "cbbTP";
+            this.cbbTP.Size = new System.Drawing.Size(207, 24);
+            this.cbbTP.TabIndex = 24;
+            this.cbbTP.SelectedIndexChanged += new System.EventHandler(this.cbbTP_SelectedIndexChanged);
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.Location = new System.Drawing.Point(584, 87);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(207, 22);
+            this.txtSDT.TabIndex = 23;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(459, 87);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(106, 20);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Số điện thoại";
             // 
             // btnRspb
             // 
@@ -123,6 +180,7 @@
             this.btnRspb.TabIndex = 21;
             this.btnRspb.Text = "Reset";
             this.btnRspb.UseVisualStyleBackColor = true;
+            this.btnRspb.Click += new System.EventHandler(this.btnRspb_Click);
             // 
             // btnXoapb
             // 
@@ -133,6 +191,7 @@
             this.btnXoapb.TabIndex = 20;
             this.btnXoapb.Text = "Xóa";
             this.btnXoapb.UseVisualStyleBackColor = true;
+            this.btnXoapb.Click += new System.EventHandler(this.btnXoapb_Click);
             // 
             // btnSuapb
             // 
@@ -143,6 +202,7 @@
             this.btnSuapb.TabIndex = 19;
             this.btnSuapb.Text = "Sửa";
             this.btnSuapb.UseVisualStyleBackColor = true;
+            this.btnSuapb.Click += new System.EventHandler(this.btnSuapb_Click);
             // 
             // btnThempb
             // 
@@ -153,6 +213,7 @@
             this.btnThempb.TabIndex = 18;
             this.btnThempb.Text = "Thêm";
             this.btnThempb.UseVisualStyleBackColor = true;
+            this.btnThempb.Click += new System.EventHandler(this.btnThempb_Click);
             // 
             // txtDiaChi
             // 
@@ -161,19 +222,19 @@
             this.txtDiaChi.Size = new System.Drawing.Size(207, 22);
             this.txtDiaChi.TabIndex = 12;
             // 
-            // txbTenpb
+            // txtTenpb
             // 
-            this.txbTenpb.Location = new System.Drawing.Point(189, 97);
-            this.txbTenpb.Name = "txbTenpb";
-            this.txbTenpb.Size = new System.Drawing.Size(207, 22);
-            this.txbTenpb.TabIndex = 10;
+            this.txtTenpb.Location = new System.Drawing.Point(189, 97);
+            this.txtTenpb.Name = "txtTenpb";
+            this.txtTenpb.Size = new System.Drawing.Size(207, 22);
+            this.txtTenpb.TabIndex = 10;
             // 
-            // txbMapb
+            // txtMapb
             // 
-            this.txbMapb.Location = new System.Drawing.Point(189, 42);
-            this.txbMapb.Name = "txbMapb";
-            this.txbMapb.Size = new System.Drawing.Size(207, 22);
-            this.txbMapb.TabIndex = 9;
+            this.txtMapb.Location = new System.Drawing.Point(189, 42);
+            this.txtMapb.Name = "txtMapb";
+            this.txtMapb.Size = new System.Drawing.Size(207, 22);
+            this.txtMapb.TabIndex = 9;
             // 
             // label4
             // 
@@ -215,31 +276,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Mã phòng ban";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(459, 87);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 20);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Số điện thoại";
-            // 
-            // txbSDT
-            // 
-            this.txbSDT.Location = new System.Drawing.Point(584, 87);
-            this.txbSDT.Name = "txbSDT";
-            this.txbSDT.Size = new System.Drawing.Size(207, 22);
-            this.txbSDT.TabIndex = 23;
-            // 
-            // cbbTP
-            // 
-            this.cbbTP.FormattingEnabled = true;
-            this.cbbTP.Location = new System.Drawing.Point(189, 156);
-            this.cbbTP.Name = "cbbTP";
-            this.cbbTP.Size = new System.Drawing.Size(207, 24);
-            this.cbbTP.TabIndex = 24;
-            // 
             // frmPhongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -248,6 +284,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Name = "frmPhongBan";
             this.Text = "Phòng ban";
+            this.Load += new System.EventHandler(this.frmPhongBan_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
@@ -262,24 +299,25 @@
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvPB;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ComboBox cbbTP;
-        private System.Windows.Forms.TextBox txbSDT;
+        private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnRspb;
         private System.Windows.Forms.Button btnXoapb;
         private System.Windows.Forms.Button btnSuapb;
         private System.Windows.Forms.Button btnThempb;
         private System.Windows.Forms.TextBox txtDiaChi;
-        private System.Windows.Forms.TextBox txbTenpb;
-        private System.Windows.Forms.TextBox txbMapb;
+        private System.Windows.Forms.TextBox txtTenpb;
+        private System.Windows.Forms.TextBox txtMapb;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }

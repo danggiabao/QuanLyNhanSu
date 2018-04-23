@@ -16,5 +16,19 @@ namespace QuanLyNS
         {
             InitializeComponent();
         }
+        frmPhongBan frmpb = new frmPhongBan();
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmpb.ShowDialog();
+            this.Show();
+        }
+        frmHDLD frmhd = new frmHDLD();
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmhd.ShowDialog();
+            this.Show();
+        }
     }
 }
