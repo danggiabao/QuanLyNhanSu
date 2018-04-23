@@ -19,3 +19,6 @@ C:\Users\dangt\Desktop\Git\QuanLyNS\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\Qua
 C:\Users\dangt\Desktop\Git\QuanLyNS\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.csproj.CoreCompileInputs.cache
 C:\Users\dangt\Desktop\Git\QuanLyNS\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.exe
 C:\Users\dangt\Desktop\Git\QuanLyNS\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.pdb
+C:\Users\Luu Trung Kien\Desktop\Thực Tập Nhóm\QuanLyNhanSu\QuanLyNS\QuanLyNS\bin\Debug\QuanLyNS.exe.config
+C:\Users\Luu Trung Kien\Desktop\Thực Tập Nhóm\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.exe
+C:\Users\Luu Trung Kien\Desktop\Thực Tập Nhóm\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.pdb
