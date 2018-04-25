@@ -20,6 +20,7 @@ namespace QuanLyNS
         DataConections dt = new DataConections();
 
         #region ShowData-ListView-ComboBox
+        
         private void lvHDLD_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtMaHD.Enabled = false;

@@ -123,22 +123,22 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Mã Phòng Ban";
-            this.columnHeader1.Width = 160;
+            this.columnHeader1.Width = 155;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Tên Phòng Ban";
-            this.columnHeader2.Width = 171;
+            this.columnHeader2.Width = 162;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Mã Trưởng Phòng";
-            this.columnHeader3.Width = 211;
+            this.columnHeader3.Width = 185;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Địa chỉ";
-            this.columnHeader4.Width = 242;
+            this.columnHeader4.Width = 197;
             // 
             // columnHeader5
             // 

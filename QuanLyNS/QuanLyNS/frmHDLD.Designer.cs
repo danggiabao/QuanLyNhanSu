@@ -132,7 +132,7 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "Mã nhân viên";
-            this.columnHeader4.Width = 203;
+            this.columnHeader4.Width = 192;
             // 
             // cbbMaNV
             // 
