@@ -122,7 +122,7 @@
             this.tabControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1005, 582);
+            this.tabControl2.Size = new System.Drawing.Size(1015, 613);
             this.tabControl2.TabIndex = 1;
             // 
             // tabPage1
@@ -132,7 +132,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(997, 553);
+            this.tabPage1.Size = new System.Drawing.Size(1007, 584);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Thông tin nhân viên";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -174,8 +174,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.label3);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
-            this.splitContainer1.Size = new System.Drawing.Size(991, 549);
-            this.splitContainer1.SplitterDistance = 330;
+            this.splitContainer1.Size = new System.Drawing.Size(1001, 580);
+            this.splitContainer1.SplitterDistance = 348;
             this.splitContainer1.TabIndex = 0;
             // 
             // groupBox1
@@ -187,7 +187,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(991, 330);
+            this.groupBox1.Size = new System.Drawing.Size(1001, 348);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Nhân Viên :";
@@ -209,7 +209,7 @@
             this.lvNhanVien.Location = new System.Drawing.Point(3, 27);
             this.lvNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvNhanVien.Name = "lvNhanVien";
-            this.lvNhanVien.Size = new System.Drawing.Size(985, 301);
+            this.lvNhanVien.Size = new System.Drawing.Size(995, 319);
             this.lvNhanVien.TabIndex = 0;
             this.lvNhanVien.UseCompatibleStateImageBehavior = false;
             this.lvNhanVien.View = System.Windows.Forms.View.Details;
@@ -432,7 +432,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(997, 553);
+            this.tabPage2.Size = new System.Drawing.Size(1007, 584);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Chức vụ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -459,8 +459,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.groupBox3);
-            this.splitContainer3.Size = new System.Drawing.Size(991, 549);
-            this.splitContainer3.SplitterDistance = 329;
+            this.splitContainer3.Size = new System.Drawing.Size(1001, 580);
+            this.splitContainer3.SplitterDistance = 332;
             this.splitContainer3.TabIndex = 0;
             // 
             // btnRsCV
@@ -557,7 +557,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(658, 549);
+            this.groupBox3.Size = new System.Drawing.Size(665, 580);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chức vụ";
@@ -574,7 +574,7 @@
             this.lvCV.Location = new System.Drawing.Point(3, 23);
             this.lvCV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvCV.Name = "lvCV";
-            this.lvCV.Size = new System.Drawing.Size(652, 524);
+            this.lvCV.Size = new System.Drawing.Size(659, 555);
             this.lvCV.TabIndex = 0;
             this.lvCV.UseCompatibleStateImageBehavior = false;
             this.lvCV.View = System.Windows.Forms.View.Details;
@@ -598,7 +598,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Size = new System.Drawing.Size(997, 553);
+            this.tabPage3.Size = new System.Drawing.Size(1007, 584);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Tag = "c";
             this.tabPage3.Text = "Trình độ học vấn";
@@ -627,8 +627,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer2.Size = new System.Drawing.Size(991, 549);
-            this.splitContainer2.SplitterDistance = 329;
+            this.splitContainer2.Size = new System.Drawing.Size(1001, 580);
+            this.splitContainer2.SplitterDistance = 332;
             this.splitContainer2.TabIndex = 1;
             // 
             // btnRstd
@@ -738,7 +738,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(658, 549);
+            this.groupBox2.Size = new System.Drawing.Size(665, 580);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin trinh độ học vấn";
@@ -753,7 +753,7 @@
             this.listView1.Location = new System.Drawing.Point(3, 27);
             this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(652, 520);
+            this.listView1.Size = new System.Drawing.Size(659, 551);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -763,7 +763,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(1005, 582);
+            this.ClientSize = new System.Drawing.Size(1015, 613);
             this.Controls.Add(this.tabControl2);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmNhanVien";

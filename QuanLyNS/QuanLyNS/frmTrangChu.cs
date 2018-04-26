@@ -23,6 +23,22 @@ namespace QuanLyNS
             this.Hide();
             f.ShowDialog();
             this.Show();
+        } 
+
+        private void btnHD_Click(object sender, EventArgs e)
+        {
+           frmHDLD frmhd = new frmHDLD();
+           this.Hide();
+           frmhd.ShowDialog();
+           this.Show();
+        }
+
+        private void btnPB_Click(object sender, EventArgs e)
+        {
+            frmPhongBan frmpb = new frmPhongBan();
+            this.Hide();
+            frmpb.ShowDialog();
+            this.Show();
         }
     }
 }

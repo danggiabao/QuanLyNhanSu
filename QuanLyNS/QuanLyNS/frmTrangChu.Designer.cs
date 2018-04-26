@@ -46,7 +46,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1005, 582);
+            this.panel1.Size = new System.Drawing.Size(1015, 613);
             this.panel1.TabIndex = 0;
             // 
             // btnHD
@@ -62,6 +62,7 @@
             this.btnHD.Text = "Quản lý hợp đồng lao động";
             this.btnHD.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHD.UseVisualStyleBackColor = false;
+            this.btnHD.Click += new System.EventHandler(this.btnHD_Click);
             // 
             // btnPB
             // 
@@ -76,6 +77,7 @@
             this.btnPB.Text = "Quản lý phòng ban";
             this.btnPB.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPB.UseVisualStyleBackColor = false;
+            this.btnPB.Click += new System.EventHandler(this.btnPB_Click);
             // 
             // label1
             // 
@@ -106,7 +108,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1005, 582);
+            this.ClientSize = new System.Drawing.Size(1015, 613);
             this.Controls.Add(this.panel1);
             this.Name = "frmTrangChu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
