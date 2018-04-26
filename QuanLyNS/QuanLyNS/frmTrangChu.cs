@@ -16,5 +16,13 @@ namespace QuanLyNS
         {
             InitializeComponent();
         }
+
+        private void btnNV_Click(object sender, EventArgs e)
+        {
+            frmNhanVien f = new frmNhanVien();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }
