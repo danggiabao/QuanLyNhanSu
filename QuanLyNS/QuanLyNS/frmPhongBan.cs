@@ -162,8 +162,15 @@ namespace QuanLyNS
             liv.SubItems.Add(txtDiaChi.Text);
             liv.SubItems.Add(txtSDT.Text);
             lvPB.Items.Add(liv);
-            AddPB_DataBase();
-            MessageBox.Show("Đã thêm thành công");
+
+            if (txtMapb.Text == "")
+                MessageBox.Show("Nhập mã phòng ban!");
+            else
+            {
+                AddPB_DataBase();
+                MessageBox.Show("Thêm thành công");
+            }
+
         }
 
         private void btnSuapb_Click(object sender, EventArgs e)

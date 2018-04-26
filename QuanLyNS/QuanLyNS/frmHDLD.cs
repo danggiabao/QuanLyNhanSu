@@ -152,7 +152,7 @@ namespace QuanLyNS
 
 
         #endregion
-
+        #region Control
         private void btnThem_Click(object sender, EventArgs e)
         {
             ListViewItem liv = new ListViewItem(txtMaHD.Text);
@@ -160,10 +160,22 @@ namespace QuanLyNS
             liv.SubItems.Add(txtLuong.Text);
             liv.SubItems.Add(manv);            
             lvHDLD.Items.Add(liv);
-            AddHD_DataBase();
-            MessageBox.Show("Đã thêm thành công");
+            if (txtMaHD.Text == "")
+                MessageBox.Show("Nhập mã hợp đồng!");
+            else
+            {
+                if (cbbMaNV.Text == "")
+                    MessageBox.Show("Nhập mã nhân viên");
+                else
+                {
+                    if (txtLuong.Text == "")
+                        txtLuong.Text = "0";
+                    AddHD_DataBase();
+                    MessageBox.Show("Đã sửa thành công");
+                }
+            }
         }
-
+        
         private void btnSua_Click(object sender, EventArgs e)
         {
             btnThem.Enabled = true;
@@ -173,8 +185,17 @@ namespace QuanLyNS
             liv.SubItems[1].Text = txtLoaiHD.Text;
             liv.SubItems[2].Text = cbbMaNV.Text;
             liv.SubItems[3].Text = txtLuong.Text;
-            RepairHD_Database();
-            MessageBox.Show("Đã sửa thành công");
+            if (cbbMaNV.Text == "")
+            {
+                MessageBox.Show("Nhập mã nhân viên");
+            }
+            else
+            {
+                if (txtLuong.Text == "")
+                    txtLuong.Text = "0";
+                RepairHD_Database();
+                MessageBox.Show("Đã sửa thành công");
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -207,5 +228,6 @@ namespace QuanLyNS
             cbbMaNV.ResetText();
             
         }
+        #endregion
     }
 }
