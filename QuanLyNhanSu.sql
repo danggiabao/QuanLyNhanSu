@@ -7,7 +7,7 @@ CREATE TABLE CHUCVU(
 	TenCV nvarchar(50)
 )
 GO
-
+SELECT * FROM PHONGBAN
 GO
 CREATE TABLE PHONGBAN(
 	MaPB VARCHAR(10) primary key,
@@ -55,5 +55,40 @@ CREATE TABLE DANGNHAP
 	TaiKhoan NVARCHAR(30),
 	MatKhau VARCHAR(30)
 )
+
 GO
- 
+CREATE PROC ThemNV ( @MaNV varchar(10),@HoTen nvarchar(50),@GioiTinh nvarchar(3),@SDT char(15),@QueQuan nvarchar(50),@NgaySinh date,@MaTDHV varchar(10),@MaPB varchar(10))AS
+BEGIN
+	INSERT INTO dbo.NHANVIEN
+	        ( MaNV ,HoTen ,GioiTinh ,SDT ,QueQuan , NgaySinh ,MaTDHV ,MaPB)
+	VALUES  ( @MaNV ,@HoTen ,@GioiTinh ,@SDT ,@QueQuan,@NgaySinh ,@MaTDHV ,@MaPB )
+END
+CREATE PROC SuaNV ( @MaNV varchar(10),@HoTen nvarchar(50),@GioiTinh nvarchar(3),@SDT char(15),@QueQuan nvarchar(50),@NgaySinh date,@MaTDHV varchar(10),@MaPB varchar(10))AS
+BEGIN
+	UPDATE dbo.NHANVIEN
+	SET HoTen  = @HoTen,GioiTinh=@GioiTinh,SDT=@SDT,QueQuan=@QueQuan,NgaySinh=@NgaySinh,MaTDHV=@MaTDHV,MaPB=@MaPB WHERE MaNV =@MaNV
+END
+
+CREATE PROC XoaNV( @MaNV varchar(10)) AS 
+BEGIN
+	DELETE FROM dbo.NHANVIEN WHERE MaNV = @MaNV 
+END
+
+-- Trình Độ học vấn 
+CREATE PROC ThemTD( @MaTDHV varchar(10), @TenTrinhDo nvarchar(50), @ChuyenNganh nvarchar(50))AS 
+BEGIN
+	INSERT INTO dbo.TRINHDOHOCVAN
+	        ( MaTDHV, TenTrinhDo, ChuyenNganh )
+	VALUES  (@MaTDHV,@TenTrinhDo,@ChuyenNganh)
+END
+
+CREATE PROC SuaTD( @MaTDHV varchar(10), @TenTrinhDo nvarchar(50), @ChuyenNganh nvarchar(50))AS 
+BEGIN
+	UPDATE dbo.TRINHDOHOCVAN
+	SET TenTrinhDo = @TenTrinhDo,ChuyenNganh = @ChuyenNganh WHERE MaTDHV =@MaTDHV
+END
+
+CREATE PROC XoaTD(@MaTDHV varchar(10)) AS 
+BEGIN 
+	DELETE FROM dbo.TRINHDOHOCVAN WHERE MaTDHV = @MaTDHV
+END 
