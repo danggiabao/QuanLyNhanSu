@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace QuanLyNS
 {
-	public class DataConections
+	public class DataConnection
 	{
-		string Strcon = @"Data Source=DESKTOP-2NN1U31\SQLEXPRESS;Initial Catalog=QL_GVHS;Integrated Security=True";
- 		public SqlConnection conn = null;
+		string Strcon = @"Data Source=DESKTOP-2NN1U31\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Security=True";
+		//string  Strcon = @"Data Source=DESKTOP-A8BKF4E;Initial Catalog=QL_GVHS;Integrated Security=True";
+		public SqlConnection conn = null;
 		public void OpenConnection()
 		{
 			if (conn == null) // kiểm tra có kết nối chưa..chưa kết nối thì sẽ khởi tạo kết nối

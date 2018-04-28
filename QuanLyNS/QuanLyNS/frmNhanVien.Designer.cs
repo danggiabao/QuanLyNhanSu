@@ -39,6 +39,8 @@
 			this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.btnRs = new System.Windows.Forms.Button();
 			this.btnXoa = new System.Windows.Forms.Button();
 			this.btnSua = new System.Windows.Forms.Button();
@@ -87,7 +89,7 @@
 			this.label10 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.listView1 = new System.Windows.Forms.ListView();
+			this.lvTrinhDo = new System.Windows.Forms.ListView();
 			this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -119,20 +121,20 @@
 			this.tabControl2.Controls.Add(this.tabPage3);
 			this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tabControl2.Location = new System.Drawing.Point(0, 0);
-			this.tabControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.tabControl2.Margin = new System.Windows.Forms.Padding(2);
 			this.tabControl2.Name = "tabControl2";
 			this.tabControl2.SelectedIndex = 0;
-			this.tabControl2.Size = new System.Drawing.Size(754, 473);
+			this.tabControl2.Size = new System.Drawing.Size(842, 473);
 			this.tabControl2.TabIndex = 1;
 			// 
 			// tabPage1
 			// 
 			this.tabPage1.Controls.Add(this.splitContainer1);
 			this.tabPage1.Location = new System.Drawing.Point(4, 22);
-			this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
 			this.tabPage1.Name = "tabPage1";
-			this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.tabPage1.Size = new System.Drawing.Size(746, 447);
+			this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+			this.tabPage1.Size = new System.Drawing.Size(834, 447);
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "Thông tin nhân viên";
 			this.tabPage1.UseVisualStyleBackColor = true;
@@ -141,7 +143,7 @@
 			// 
 			this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.splitContainer1.Location = new System.Drawing.Point(2, 2);
-			this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
 			this.splitContainer1.Name = "splitContainer1";
 			this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
 			// 
@@ -174,7 +176,7 @@
 			this.splitContainer1.Panel2.Controls.Add(this.label3);
 			this.splitContainer1.Panel2.Controls.Add(this.label2);
 			this.splitContainer1.Panel2.Controls.Add(this.label1);
-			this.splitContainer1.Size = new System.Drawing.Size(742, 443);
+			this.splitContainer1.Size = new System.Drawing.Size(830, 443);
 			this.splitContainer1.SplitterDistance = 267;
 			this.splitContainer1.SplitterWidth = 3;
 			this.splitContainer1.TabIndex = 0;
@@ -185,10 +187,10 @@
 			this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.groupBox1.Location = new System.Drawing.Point(0, 0);
-			this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.groupBox1.Size = new System.Drawing.Size(742, 267);
+			this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+			this.groupBox1.Size = new System.Drawing.Size(830, 267);
 			this.groupBox1.TabIndex = 1;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Thông Tin Nhân Viên :";
@@ -201,73 +203,116 @@
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader6});
+            this.columnHeader6,
+            this.columnHeader12,
+            this.columnHeader13});
 			this.lvNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lvNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lvNhanVien.FullRowSelect = true;
 			this.lvNhanVien.GridLines = true;
 			this.lvNhanVien.HideSelection = false;
 			this.lvNhanVien.Location = new System.Drawing.Point(2, 22);
-			this.lvNhanVien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.lvNhanVien.Margin = new System.Windows.Forms.Padding(2);
 			this.lvNhanVien.Name = "lvNhanVien";
-			this.lvNhanVien.Size = new System.Drawing.Size(738, 243);
+			this.lvNhanVien.Size = new System.Drawing.Size(826, 243);
 			this.lvNhanVien.TabIndex = 0;
 			this.lvNhanVien.UseCompatibleStateImageBehavior = false;
 			this.lvNhanVien.View = System.Windows.Forms.View.Details;
-			// 
 			// columnHeader1
 			// 
-			this.columnHeader1.Width = 150;
+			this.columnHeader1.Text = "Mã Nhân Viên";
+			this.columnHeader1.Width = 105;
+			// 
+			// columnHeader2
+			// 
+			this.columnHeader2.Text = "Tên Nhân Viên";
+			this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.columnHeader2.Width = 150;
+			// 
+			// columnHeader3
+			// 
+			this.columnHeader3.Text = "GT";
+			this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// columnHeader4
+			// 
+			this.columnHeader4.Text = "SDT";
+			this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.columnHeader4.Width = 100;
+			// 
+			// columnHeader5
+			// 
+			this.columnHeader5.Text = "Quê Quán";
+			this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.columnHeader5.Width = 100;
+			// 
+			// columnHeader6
+			// 
+			this.columnHeader6.Text = "Ngày Sinh";
+			this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.columnHeader6.Width = 100;
+			// 
+			// columnHeader12
+			// 
+			this.columnHeader12.Text = "Mã TDHV";
+			this.columnHeader12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.columnHeader12.Width = 100;
+			// 
+			// columnHeader13
+			// 
+			this.columnHeader13.Text = "Mã phòng ban";
+			this.columnHeader13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.columnHeader13.Width = 100;
 			// 
 			// btnRs
 			// 
 			this.btnRs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnRs.Location = new System.Drawing.Point(623, 133);
-			this.btnRs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnRs.Margin = new System.Windows.Forms.Padding(2);
 			this.btnRs.Name = "btnRs";
 			this.btnRs.Size = new System.Drawing.Size(80, 24);
 			this.btnRs.TabIndex = 20;
 			this.btnRs.Text = "Reset";
 			this.btnRs.UseVisualStyleBackColor = true;
-			// 
+ 			// 
 			// btnXoa
 			// 
 			this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnXoa.Location = new System.Drawing.Point(623, 91);
-			this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
 			this.btnXoa.Name = "btnXoa";
 			this.btnXoa.Size = new System.Drawing.Size(80, 24);
 			this.btnXoa.TabIndex = 19;
 			this.btnXoa.Text = "Xóa";
 			this.btnXoa.UseVisualStyleBackColor = true;
-			// 
+ 			// 
 			// btnSua
 			// 
 			this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSua.Location = new System.Drawing.Point(623, 51);
-			this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnSua.Margin = new System.Windows.Forms.Padding(2);
 			this.btnSua.Name = "btnSua";
 			this.btnSua.Size = new System.Drawing.Size(80, 24);
 			this.btnSua.TabIndex = 18;
 			this.btnSua.Text = "Sửa";
 			this.btnSua.UseVisualStyleBackColor = true;
-			// 
+ 			// 
 			// btnThem
 			// 
 			this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnThem.Location = new System.Drawing.Point(623, 11);
-			this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnThem.Margin = new System.Windows.Forms.Padding(2);
 			this.btnThem.Name = "btnThem";
 			this.btnThem.Size = new System.Drawing.Size(80, 24);
 			this.btnThem.TabIndex = 17;
 			this.btnThem.Text = "Thêm";
 			this.btnThem.UseVisualStyleBackColor = true;
-			// 
+ 			// 
 			// rdbNu
 			// 
 			this.rdbNu.AutoSize = true;
 			this.rdbNu.Location = new System.Drawing.Point(175, 99);
-			this.rdbNu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.rdbNu.Margin = new System.Windows.Forms.Padding(2);
 			this.rdbNu.Name = "rdbNu";
 			this.rdbNu.Size = new System.Drawing.Size(39, 17);
 			this.rdbNu.TabIndex = 16;
@@ -279,7 +324,7 @@
 			this.rdbNam.AutoSize = true;
 			this.rdbNam.Checked = true;
 			this.rdbNam.Location = new System.Drawing.Point(110, 98);
-			this.rdbNam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.rdbNam.Margin = new System.Windows.Forms.Padding(2);
 			this.rdbNam.Name = "rdbNam";
 			this.rdbNam.Size = new System.Drawing.Size(47, 17);
 			this.rdbNam.TabIndex = 15;
@@ -291,7 +336,7 @@
 			// 
 			this.dtNS.Format = System.Windows.Forms.DateTimePickerFormat.Short;
 			this.dtNS.Location = new System.Drawing.Point(399, 50);
-			this.dtNS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.dtNS.Margin = new System.Windows.Forms.Padding(2);
 			this.dtNS.Name = "dtNS";
 			this.dtNS.Size = new System.Drawing.Size(156, 20);
 			this.dtNS.TabIndex = 14;
@@ -300,7 +345,7 @@
 			// 
 			this.cbbPB.FormattingEnabled = true;
 			this.cbbPB.Location = new System.Drawing.Point(399, 134);
-			this.cbbPB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.cbbPB.Margin = new System.Windows.Forms.Padding(2);
 			this.cbbPB.Name = "cbbPB";
 			this.cbbPB.Size = new System.Drawing.Size(156, 21);
 			this.cbbPB.TabIndex = 13;
@@ -309,7 +354,7 @@
 			// 
 			this.cbbHV.FormattingEnabled = true;
 			this.cbbHV.Location = new System.Drawing.Point(399, 97);
-			this.cbbHV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.cbbHV.Margin = new System.Windows.Forms.Padding(2);
 			this.cbbHV.Name = "cbbHV";
 			this.cbbHV.Size = new System.Drawing.Size(156, 21);
 			this.cbbHV.TabIndex = 12;
@@ -317,7 +362,7 @@
 			// txbQueQuan
 			// 
 			this.txbQueQuan.Location = new System.Drawing.Point(399, 11);
-			this.txbQueQuan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txbQueQuan.Margin = new System.Windows.Forms.Padding(2);
 			this.txbQueQuan.Name = "txbQueQuan";
 			this.txbQueQuan.Size = new System.Drawing.Size(156, 20);
 			this.txbQueQuan.TabIndex = 11;
@@ -325,7 +370,7 @@
 			// txbSDT
 			// 
 			this.txbSDT.Location = new System.Drawing.Point(110, 137);
-			this.txbSDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txbSDT.Margin = new System.Windows.Forms.Padding(2);
 			this.txbSDT.Name = "txbSDT";
 			this.txbSDT.Size = new System.Drawing.Size(156, 20);
 			this.txbSDT.TabIndex = 10;
@@ -333,7 +378,7 @@
 			// txbTen
 			// 
 			this.txbTen.Location = new System.Drawing.Point(110, 51);
-			this.txbTen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txbTen.Margin = new System.Windows.Forms.Padding(2);
 			this.txbTen.Name = "txbTen";
 			this.txbTen.Size = new System.Drawing.Size(156, 20);
 			this.txbTen.TabIndex = 9;
@@ -341,7 +386,7 @@
 			// txbMaNV
 			// 
 			this.txbMaNV.Location = new System.Drawing.Point(110, 11);
-			this.txbMaNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txbMaNV.Margin = new System.Windows.Forms.Padding(2);
 			this.txbMaNV.Name = "txbMaNV";
 			this.txbMaNV.Size = new System.Drawing.Size(156, 20);
 			this.txbMaNV.TabIndex = 8;
@@ -438,10 +483,10 @@
 			// 
 			this.tabPage2.Controls.Add(this.splitContainer3);
 			this.tabPage2.Location = new System.Drawing.Point(4, 22);
-			this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
 			this.tabPage2.Name = "tabPage2";
-			this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.tabPage2.Size = new System.Drawing.Size(746, 447);
+			this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+			this.tabPage2.Size = new System.Drawing.Size(834, 447);
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Chức vụ";
 			this.tabPage2.UseVisualStyleBackColor = true;
@@ -450,7 +495,7 @@
 			// 
 			this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.splitContainer3.Location = new System.Drawing.Point(2, 2);
-			this.splitContainer3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.splitContainer3.Margin = new System.Windows.Forms.Padding(2);
 			this.splitContainer3.Name = "splitContainer3";
 			// 
 			// splitContainer3.Panel1
@@ -467,8 +512,8 @@
 			// splitContainer3.Panel2
 			// 
 			this.splitContainer3.Panel2.Controls.Add(this.groupBox3);
-			this.splitContainer3.Size = new System.Drawing.Size(742, 443);
-			this.splitContainer3.SplitterDistance = 247;
+			this.splitContainer3.Size = new System.Drawing.Size(830, 443);
+			this.splitContainer3.SplitterDistance = 276;
 			this.splitContainer3.SplitterWidth = 3;
 			this.splitContainer3.TabIndex = 0;
 			// 
@@ -476,7 +521,7 @@
 			// 
 			this.btnRsCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnRsCV.Location = new System.Drawing.Point(146, 284);
-			this.btnRsCV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnRsCV.Margin = new System.Windows.Forms.Padding(2);
 			this.btnRsCV.Name = "btnRsCV";
 			this.btnRsCV.Size = new System.Drawing.Size(80, 24);
 			this.btnRsCV.TabIndex = 22;
@@ -487,7 +532,7 @@
 			// 
 			this.btnXoaCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnXoaCV.Location = new System.Drawing.Point(32, 284);
-			this.btnXoaCV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnXoaCV.Margin = new System.Windows.Forms.Padding(2);
 			this.btnXoaCV.Name = "btnXoaCV";
 			this.btnXoaCV.Size = new System.Drawing.Size(80, 24);
 			this.btnXoaCV.TabIndex = 21;
@@ -498,7 +543,7 @@
 			// 
 			this.btnSuaCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSuaCV.Location = new System.Drawing.Point(146, 223);
-			this.btnSuaCV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnSuaCV.Margin = new System.Windows.Forms.Padding(2);
 			this.btnSuaCV.Name = "btnSuaCV";
 			this.btnSuaCV.Size = new System.Drawing.Size(80, 24);
 			this.btnSuaCV.TabIndex = 20;
@@ -509,7 +554,7 @@
 			// 
 			this.btnThemCV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnThemCV.Location = new System.Drawing.Point(32, 223);
-			this.btnThemCV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnThemCV.Margin = new System.Windows.Forms.Padding(2);
 			this.btnThemCV.Name = "btnThemCV";
 			this.btnThemCV.Size = new System.Drawing.Size(80, 24);
 			this.btnThemCV.TabIndex = 19;
@@ -519,7 +564,7 @@
 			// textBox2
 			// 
 			this.textBox2.Location = new System.Drawing.Point(32, 148);
-			this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.textBox2.Margin = new System.Windows.Forms.Padding(2);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(195, 20);
 			this.textBox2.TabIndex = 11;
@@ -527,7 +572,7 @@
 			// textBox1
 			// 
 			this.textBox1.Location = new System.Drawing.Point(32, 84);
-			this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.textBox1.Margin = new System.Windows.Forms.Padding(2);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(195, 20);
 			this.textBox1.TabIndex = 10;
@@ -559,10 +604,10 @@
 			this.groupBox3.Controls.Add(this.listView2);
 			this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox3.Location = new System.Drawing.Point(0, 0);
-			this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
 			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.groupBox3.Size = new System.Drawing.Size(492, 443);
+			this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+			this.groupBox3.Size = new System.Drawing.Size(551, 443);
 			this.groupBox3.TabIndex = 0;
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "groupBox3";
@@ -574,9 +619,9 @@
             this.columnHeader11});
 			this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.listView2.Location = new System.Drawing.Point(2, 15);
-			this.listView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.listView2.Margin = new System.Windows.Forms.Padding(2);
 			this.listView2.Name = "listView2";
-			this.listView2.Size = new System.Drawing.Size(488, 426);
+			this.listView2.Size = new System.Drawing.Size(547, 426);
 			this.listView2.TabIndex = 0;
 			this.listView2.UseCompatibleStateImageBehavior = false;
 			this.listView2.View = System.Windows.Forms.View.Details;
@@ -585,10 +630,10 @@
 			// 
 			this.tabPage3.Controls.Add(this.splitContainer2);
 			this.tabPage3.Location = new System.Drawing.Point(4, 22);
-			this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
 			this.tabPage3.Name = "tabPage3";
-			this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.tabPage3.Size = new System.Drawing.Size(746, 447);
+			this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
+			this.tabPage3.Size = new System.Drawing.Size(834, 447);
 			this.tabPage3.TabIndex = 2;
 			this.tabPage3.Tag = "c";
 			this.tabPage3.Text = "Trình độ học vấn";
@@ -598,7 +643,7 @@
 			// 
 			this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.splitContainer2.Location = new System.Drawing.Point(2, 2);
-			this.splitContainer2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.splitContainer2.Margin = new System.Windows.Forms.Padding(2);
 			this.splitContainer2.Name = "splitContainer2";
 			// 
 			// splitContainer2.Panel1
@@ -617,8 +662,8 @@
 			// splitContainer2.Panel2
 			// 
 			this.splitContainer2.Panel2.Controls.Add(this.groupBox2);
-			this.splitContainer2.Size = new System.Drawing.Size(742, 443);
-			this.splitContainer2.SplitterDistance = 247;
+			this.splitContainer2.Size = new System.Drawing.Size(830, 443);
+			this.splitContainer2.SplitterDistance = 276;
 			this.splitContainer2.SplitterWidth = 3;
 			this.splitContainer2.TabIndex = 1;
 			// 
@@ -626,50 +671,50 @@
 			// 
 			this.btnRstd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnRstd.Location = new System.Drawing.Point(138, 324);
-			this.btnRstd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnRstd.Margin = new System.Windows.Forms.Padding(2);
 			this.btnRstd.Name = "btnRstd";
 			this.btnRstd.Size = new System.Drawing.Size(80, 24);
 			this.btnRstd.TabIndex = 21;
 			this.btnRstd.Text = "Reset";
 			this.btnRstd.UseVisualStyleBackColor = true;
-			// 
+ 			// 
 			// btnSuatd
 			// 
 			this.btnSuatd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSuatd.Location = new System.Drawing.Point(138, 280);
-			this.btnSuatd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnSuatd.Margin = new System.Windows.Forms.Padding(2);
 			this.btnSuatd.Name = "btnSuatd";
 			this.btnSuatd.Size = new System.Drawing.Size(80, 24);
 			this.btnSuatd.TabIndex = 20;
 			this.btnSuatd.Text = "Sửa";
 			this.btnSuatd.UseVisualStyleBackColor = true;
-			// 
+ 			// 
 			// btnXoatd
 			// 
 			this.btnXoatd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnXoatd.Location = new System.Drawing.Point(27, 324);
-			this.btnXoatd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnXoatd.Margin = new System.Windows.Forms.Padding(2);
 			this.btnXoatd.Name = "btnXoatd";
 			this.btnXoatd.Size = new System.Drawing.Size(80, 24);
 			this.btnXoatd.TabIndex = 19;
 			this.btnXoatd.Text = "Xóa";
 			this.btnXoatd.UseVisualStyleBackColor = true;
-			// 
+ 			// 
 			// btnThemtd
 			// 
 			this.btnThemtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnThemtd.Location = new System.Drawing.Point(27, 280);
-			this.btnThemtd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.btnThemtd.Margin = new System.Windows.Forms.Padding(2);
 			this.btnThemtd.Name = "btnThemtd";
 			this.btnThemtd.Size = new System.Drawing.Size(80, 24);
 			this.btnThemtd.TabIndex = 18;
 			this.btnThemtd.Text = "Thêm";
 			this.btnThemtd.UseVisualStyleBackColor = true;
-			// 
+ 			// 
 			// txbCN
 			// 
 			this.txbCN.Location = new System.Drawing.Point(24, 198);
-			this.txbCN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txbCN.Margin = new System.Windows.Forms.Padding(2);
 			this.txbCN.Name = "txbCN";
 			this.txbCN.Size = new System.Drawing.Size(195, 20);
 			this.txbCN.TabIndex = 11;
@@ -677,7 +722,7 @@
 			// txbTentd
 			// 
 			this.txbTentd.Location = new System.Drawing.Point(24, 132);
-			this.txbTentd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txbTentd.Margin = new System.Windows.Forms.Padding(2);
 			this.txbTentd.Name = "txbTentd";
 			this.txbTentd.Size = new System.Drawing.Size(195, 20);
 			this.txbTentd.TabIndex = 10;
@@ -685,7 +730,7 @@
 			// txbMatd
 			// 
 			this.txbMatd.Location = new System.Drawing.Point(24, 65);
-			this.txbMatd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.txbMatd.Margin = new System.Windows.Forms.Padding(2);
 			this.txbMatd.Name = "txbMatd";
 			this.txbMatd.Size = new System.Drawing.Size(195, 20);
 			this.txbMatd.TabIndex = 9;
@@ -725,44 +770,63 @@
 			// 
 			// groupBox2
 			// 
-			this.groupBox2.Controls.Add(this.listView1);
+			this.groupBox2.Controls.Add(this.lvTrinhDo);
 			this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.groupBox2.Location = new System.Drawing.Point(0, 0);
-			this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
 			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.groupBox2.Size = new System.Drawing.Size(492, 443);
+			this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+			this.groupBox2.Size = new System.Drawing.Size(551, 443);
 			this.groupBox2.TabIndex = 0;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Thông tin trinh độ học vấn";
 			// 
-			// listView1
+			// lvTrinhDo
 			// 
-			this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+			this.lvTrinhDo.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader7,
             this.columnHeader8,
             this.columnHeader9});
-			this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.listView1.Location = new System.Drawing.Point(2, 22);
-			this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(488, 419);
-			this.listView1.TabIndex = 0;
-			this.listView1.UseCompatibleStateImageBehavior = false;
-			this.listView1.View = System.Windows.Forms.View.Details;
+			this.lvTrinhDo.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.lvTrinhDo.FullRowSelect = true;
+			this.lvTrinhDo.GridLines = true;
+			this.lvTrinhDo.HideSelection = false;
+			this.lvTrinhDo.Location = new System.Drawing.Point(2, 22);
+			this.lvTrinhDo.Margin = new System.Windows.Forms.Padding(2);
+			this.lvTrinhDo.Name = "lvTrinhDo";
+			this.lvTrinhDo.Size = new System.Drawing.Size(547, 419);
+			this.lvTrinhDo.TabIndex = 0;
+			this.lvTrinhDo.UseCompatibleStateImageBehavior = false;
+			this.lvTrinhDo.View = System.Windows.Forms.View.Details;
+ 			// 
+			// columnHeader7
+			// 
+			this.columnHeader7.Text = "Mã TĐ Học Vấn";
+			this.columnHeader7.Width = 180;
+			// 
+			// columnHeader8
+			// 
+			this.columnHeader8.Text = "Tên TĐ Học Vấn";
+			this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.columnHeader8.Width = 180;
+			// 
+			// columnHeader9
+			// 
+			this.columnHeader9.Text = "Chuyên Ngành";
+			this.columnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.columnHeader9.Width = 182;
 			// 
 			// frmNhanVien
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.Info;
-			this.ClientSize = new System.Drawing.Size(754, 473);
+			this.ClientSize = new System.Drawing.Size(842, 473);
 			this.Controls.Add(this.tabControl2);
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "frmNhanVien";
 			this.Text = "Quản lý nhân viên";
-			this.Load += new System.EventHandler(this.frmNhanVien_Load);
 			this.tabControl2.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
 			this.splitContainer1.Panel1.ResumeLayout(false);
@@ -844,7 +908,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvTrinhDo;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
@@ -854,5 +918,7 @@
         private System.Windows.Forms.Button btnXoaCV;
         private System.Windows.Forms.Button btnSuaCV;
         private System.Windows.Forms.Button btnThemCV;
-    }
+		private System.Windows.Forms.ColumnHeader columnHeader12;
+		private System.Windows.Forms.ColumnHeader columnHeader13;
+	}
 }
