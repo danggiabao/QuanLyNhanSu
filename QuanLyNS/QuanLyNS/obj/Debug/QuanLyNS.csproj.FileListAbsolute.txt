@@ -22,6 +22,51 @@ C:\Users\dangt\Desktop\Git\QuanLyNS\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\Qua
 C:\Users\Luu Trung Kien\Desktop\Thực Tập Nhóm\QuanLyNhanSu\QuanLyNS\QuanLyNS\bin\Debug\QuanLyNS.exe.config
 C:\Users\Luu Trung Kien\Desktop\Thực Tập Nhóm\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.exe
 C:\Users\Luu Trung Kien\Desktop\Thực Tập Nhóm\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.pdb
+C:\Users\dangt\Desktop\Git\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmHDLD.resources
+C:\Users\dangt\Desktop\Git\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmNhanVien.resources
+C:\Users\dangt\Desktop\Git\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmPhongBan.resources
+C:\Users\dangt\Desktop\Git\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmTrangChu.resources
+D:\TTN-2\QuanLyNhanSu\QuanLyNS\QuanLyNS\bin\Debug\QuanLyNS.exe.config
+D:\TTN-2\QuanLyNhanSu\QuanLyNS\QuanLyNS\bin\Debug\QuanLyNS.exe
+D:\TTN-2\QuanLyNhanSu\QuanLyNS\QuanLyNS\bin\Debug\QuanLyNS.pdb
+D:\TTN-2\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.csprojResolveAssemblyReference.cache
+D:\TTN-2\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmHDLD.resources
+D:\TTN-2\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmLogin.resources
+D:\TTN-2\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmNhanVien.resources
+D:\TTN-2\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmPhongBan.resources
+D:\TTN-2\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmTrangChu.resources
+D:\TTN-2\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.Properties.Resources.resources
+D:\TTN-2\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.csproj.GenerateResource.cache
+D:\TTN-2\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.csproj.CoreCompileInputs.cache
+D:\TTN-2\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.exe
+D:\TTN-2\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.pdb
+C:\Users\Hung Ngo\Desktop\New folder (2)\QuanLyNhanSu\QuanLyNS\QuanLyNS\bin\Debug\QuanLyNS.exe.config
+C:\Users\Hung Ngo\Desktop\New folder (2)\QuanLyNhanSu\QuanLyNS\QuanLyNS\bin\Debug\QuanLyNS.exe
+C:\Users\Hung Ngo\Desktop\New folder (2)\QuanLyNhanSu\QuanLyNS\QuanLyNS\bin\Debug\QuanLyNS.pdb
+C:\Users\Hung Ngo\Desktop\New folder (2)\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.csprojResolveAssemblyReference.cache
+C:\Users\Hung Ngo\Desktop\New folder (2)\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmHDLD.resources
+C:\Users\Hung Ngo\Desktop\New folder (2)\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmLogin.resources
+C:\Users\Hung Ngo\Desktop\New folder (2)\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmNhanVien.resources
+C:\Users\Hung Ngo\Desktop\New folder (2)\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmPhongBan.resources
+C:\Users\Hung Ngo\Desktop\New folder (2)\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmTrangChu.resources
+C:\Users\Hung Ngo\Desktop\New folder (2)\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.Properties.Resources.resources
+C:\Users\Hung Ngo\Desktop\New folder (2)\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.csproj.GenerateResource.cache
+C:\Users\Hung Ngo\Desktop\New folder (2)\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.csproj.CoreCompileInputs.cache
+C:\Users\Hung Ngo\Desktop\New folder (2)\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.exe
+C:\Users\Hung Ngo\Desktop\New folder (2)\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.pdb
+C:\Users\Luu Trung Kien\Downloads\QuanLyNhanSu-master\QuanLyNS\QuanLyNS\bin\Debug\QuanLyNS.exe.config
+C:\Users\Luu Trung Kien\Downloads\QuanLyNhanSu-master\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.exe
+C:\Users\Luu Trung Kien\Downloads\QuanLyNhanSu-master\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.pdb
+C:\Users\Luu Trung Kien\Downloads\QuanLyNhanSu-master\QuanLyNS\QuanLyNS\bin\Debug\QuanLyNS.exe
+C:\Users\Luu Trung Kien\Downloads\QuanLyNhanSu-master\QuanLyNS\QuanLyNS\bin\Debug\QuanLyNS.pdb
+C:\Users\Luu Trung Kien\Downloads\QuanLyNhanSu-master\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.csprojResolveAssemblyReference.cache
+C:\Users\Luu Trung Kien\Downloads\QuanLyNhanSu-master\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmHDLD.resources
+C:\Users\Luu Trung Kien\Downloads\QuanLyNhanSu-master\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmLogin.resources
+C:\Users\Luu Trung Kien\Downloads\QuanLyNhanSu-master\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmNhanVien.resources
+C:\Users\Luu Trung Kien\Downloads\QuanLyNhanSu-master\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmPhongBan.resources
+C:\Users\Luu Trung Kien\Downloads\QuanLyNhanSu-master\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmTrangChu.resources
+C:\Users\Luu Trung Kien\Downloads\QuanLyNhanSu-master\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.Properties.Resources.resources
+C:\Users\Luu Trung Kien\Downloads\QuanLyNhanSu-master\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.csproj.GenerateResource.Cache
 C:\Users\Luu Trung Kien\Desktop\Thực Tập Nhóm\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.csprojResolveAssemblyReference.cache
 C:\Users\Luu Trung Kien\Desktop\Thực Tập Nhóm\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmHDLD.resources
 C:\Users\Luu Trung Kien\Desktop\Thực Tập Nhóm\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmLogin.resources

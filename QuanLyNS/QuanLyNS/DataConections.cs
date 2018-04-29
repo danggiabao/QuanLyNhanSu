@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Data.SqlClient;
+using System.Data;
 namespace QuanLyNS
 {
-	public class DataConnection
+	public class DataConections
 	{
 		string Strcon = @"Data Source=DESKTOP-2NN1U31\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Security=True";
-		//string  Strcon = @"Data Source=DESKTOP-A8BKF4E;Initial Catalog=QL_GVHS;Integrated Security=True";
-		public SqlConnection conn = null;
+ 		public SqlConnection conn = null;
 		public void OpenConnection()
 		{
 			if (conn == null) // kiểm tra có kết nối chưa..chưa kết nối thì sẽ khởi tạo kết nối
