@@ -100,8 +100,78 @@ namespace QuanLyNS
 			reader.Close();
 		}
 		#endregion
+		#region Controllrer
+		private void btnThem_Click(object sender, EventArgs e)
+		{
+			foreach (string us in LstMaNV)
+			{
+				if (us.Contains(txbMaNV.Text))
+				{
+					MessageBox.Show("Mã nhân viên đã tồn tại !");
+					check = false;
+					break;
+				}
+				check = true;
+			}
+			if (check == true)
+			{
+				ListViewItem liv = new ListViewItem(txbMaNV.Text);
+				liv.SubItems.Add(txbTen.Text);
+				if (rdbNam.Checked == true)
+				{
+					liv.SubItems.Add(rdbNam.Text);
+				}
+				else
+				{
+					liv.SubItems.Add(rdbNu.Text);
+				}
+				liv.SubItems.Add(txbSDT.Text);
+				liv.SubItems.Add(txbQueQuan.Text);
+				liv.SubItems.Add(dtNS.Text);
+				liv.SubItems.Add(cbbHV.Text);
+				liv.SubItems.Add(cbbPB.Text);
 
-	//Trình Độ học vấn
+				lvNhanVien.Items.Add(liv);
+
+			}
+			AddNVToDatabase();
+			MessageBox.Show("Thêm Nhân Viên tha`nh công!");
+		}
+		#endregion
+		#region Database
+		public void AddNVToDatabase()
+		{
+			dt.OpenConnection();
+			SqlCommand cmd = new SqlCommand();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "ThemNV";
+			cmd.Connection = dt.conn;
+
+			cmd.Parameters.Add("@MaNV", SqlDbType.NVarChar).Value = txbMaNV.Text;
+			cmd.Parameters.Add("@HoTen", SqlDbType.NVarChar).Value = txbTen.Text;
+			if (rdbNam.Checked == true)
+			{
+				cmd.Parameters.Add("@GioiTinh", SqlDbType.NVarChar).Value = rdbNam.Text;
+			}
+			else
+			{
+				cmd.Parameters.Add("@GioiTinh", SqlDbType.NVarChar).Value = rdbNu.Text;
+			}
+			cmd.Parameters.Add("@NgaySinh", SqlDbType.Date).Value = dtNS.Value;
+			cmd.Parameters.Add("@QueQuan", SqlDbType.NVarChar).Value = txbQueQuan.Text;
+			cmd.Parameters.Add("@MaTDHV", SqlDbType.VarChar).Value = matd;
+			cmd.Parameters.Add("@MaPB", SqlDbType.VarChar).Value = mapb;
+			cmd.Parameters.Add("@SDT ", SqlDbType.NChar).Value = txbSDT.Text;
+			int ret = cmd.ExecuteNonQuery();
+			lvNhanVien.Items.Clear();
+			if (ret > 0)
+				ShowDataNV();
+		}
+		#endregion
+
+
+
+		//Trình Độ học vấn
 		#region ShowDataTrinhDo
 		public void ShowDataTD()
 		{
@@ -130,8 +200,50 @@ namespace QuanLyNS
 			reader.Close();
 		}
 		#endregion
+		#region Controller
+		private void btnThemtd_Click(object sender, EventArgs e)
+		{
+			foreach (string us in LstMaTD)
+			{
+				if (us.Contains(txbMatd.Text))
+				{
+					MessageBox.Show("Mã đã tồn tại!");
+					check = false;
+					break;
+				}
+				check = true;
+			}
+			if (check == true)
+			{
+				ListViewItem liv = new ListViewItem(txbMatd.Text);
+				liv.SubItems.Add(txbTentd.Text);
+				liv.SubItems.Add(txbCN.Text);
 
+				lvTrinhDo.Items.Add(liv);
 
+			}
+			AddTDToDatabase();
+			MessageBox.Show("Thêm thành công!");
+
+		}
+		#endregion
+		#region Database
+		public void AddTDToDatabase()
+		{
+			dt.OpenConnection();
+			SqlCommand cmd = new SqlCommand();
+			cmd.CommandType = CommandType.StoredProcedure;
+			cmd.CommandText = "ThemTD";
+			cmd.Connection = dt.conn;
+			cmd.Parameters.Add("@MaTDHV", SqlDbType.NVarChar).Value = txbMatd.Text;
+			cmd.Parameters.Add("@TenTrinhDo", SqlDbType.NVarChar).Value = txbTentd.Text;
+			cmd.Parameters.Add("@ChuyenNganh ", SqlDbType.NChar).Value = txbCN.Text;
+			int ret = cmd.ExecuteNonQuery();
+			lvNhanVien.Items.Clear();
+			if (ret > 0)
+				ShowDataTD();
+		}
+		#endregion
 		//Chức vụ
 		#region ShowDataCV
 
@@ -272,6 +384,9 @@ namespace QuanLyNS
             MessageBox.Show("Xóa thành công!");
 
         }
-        #endregion
-    }
+
+		#endregion
+
+		
+	}
 }
