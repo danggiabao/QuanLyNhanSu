@@ -7,8 +7,7 @@ CREATE TABLE CHUCVU(
 	TenCV nvarchar(50)
 )
 GO
-
-GO
+  
 CREATE TABLE PHONGBAN(
 	MaPB VARCHAR(10) primary key,
 	TenPB nvarchar(50),
@@ -32,30 +31,46 @@ CREATE TABLE NHANVIEN(
 	SDT CHAR(15),
 	QueQuan nvarchar(50),
 	NgaySinh date,
-	MaTDHV VARCHAR(10) REFERENCES TrinhDoHocVan(MaTDHV),
-	MaPB VARCHAR(10) references PhongBan(MaPB),
+
+	MaTDHV VARCHAR(10) REFERENCES TrinhDoHocVan(MaTDHV)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE,
+
+	MaPB VARCHAR(10) references PhongBan(MaPB)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
 )
 
 GO
 CREATE TABLE NHANVIEN_CHUCVU(
-	MaNV VARCHAR(10) REFERENCES NHANVIEN(MaNV),
-	MaCV VARCHAR(10) REFERENCES CHUCVU(MaCV),
+	MaNV VARCHAR(10) REFERENCES NHANVIEN(MaNV)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE,
+	MaCV VARCHAR(10) REFERENCES CHUCVU(MaCV)
+	ON DELETE CASCADE
+	ON UPDATE CASCADE,
 	PRIMARY KEY (MaNV,MaCV)
 )
-GO
+Go
+
 CREATE TABLE HOPDONGLAODONG(
 	MaHD VARCHAR(10) PRIMARY KEY,
 	LoaiHD NVARCHAR(30),
 	LuongThoaThuan BIGINT,
 	MaNV VARCHAR(10) UNIQUE REFERENCES NHANVIEN(MaNV)
+	 ON DELETE CASCADE
+	ON UPDATE CASCADE,
 )
 GO
+
+
 CREATE TABLE DANGNHAP
 (
 	TaiKhoan NVARCHAR(30),
 	MatKhau VARCHAR(30)
 )
 GO
+ 
 INSERT dbo.DANGNHAP( TaiKhoan, MatKhau )
 VALUES  ( N'admin','123456'),
 		( N'user1','123456')
@@ -151,7 +166,26 @@ BEGIN
 		DELETE dbo.CHUCVU WHERE MaCV=@machucvu
 END
 GO
---
+--ProcNhan Vien
+CREATE PROC ThemNV (@MaNV varchar(10),@HoTen nvarchar(50), @GioiTinh varchar(3),@SDT char(15), @QueQuan nvarchar(50), @NgaySinh date,@MaTDHV varchar(10),@MaPB varchar(10)) AS
+BEGIN
+	INSERT INTO dbo.NHANVIEN
+	        ( MaNV ,HoTen , GioiTinh ,SDT , QueQuan , NgaySinh ,MaTDHV ,MaPB)
+	VALUES   ( @MaNV ,@HoTen , @GioiTinh ,@SDT , @QueQuan , @NgaySinh ,@MaTDHV ,@MaPB)
+END
+
+CREATE PROC SuaNV (@MaNV varchar(10),@HoTen nvarchar(50), @GioiTinh varchar(3),@SDT char(15), @QueQuan nvarchar(50), @NgaySinh date,@MaTDHV varchar(10),@MaPB varchar(10)) AS
+BEGIN
+UPDATE dbo.NHANVIEN SET 
+HoTen =@HoTen , GioiTinh =  @GioiTinh,SDT= @SDT, QueQuan= @QueQuan , NgaySinh = @NgaySinh,MaTDHV= @MaTDHV,MaPB= @MaPB
+ WHERE 	  MaNV =@MaNV
+END
+
+CREATE PROC XoaNV (@MaNV varchar(10))AS
+BEGIN
+	DELETE dbo.NHANVIEN WHERE MaNV =  @MaNV
+END
+
 
 --Proc Phong Ban
 CREATE PROC ThemPB(@MaPB VARCHAR(10),@TenPB NVARCHAR(50),@MaTP VARCHAR(10),@DiaChi NVARCHAR(50),@SDT CHAR(15)) AS
@@ -194,5 +228,15 @@ CREATE PROC XoaHD(@MaHD VARCHAR(10)) AS
 		DELETE FROM HOPDONGLAODONG WHERE MaHD=@MaHD
  END
  ---
+ 
+ --Tạo 1 view chứa các thông tin nhân viên và hợp đồng lao động
+ CREATE VIEW HopDongNhanVien AS
+ SELECT nv.*,hd.LoaiHD,hd.MaHD,hd.LuongThoaThuan FROM dbo.NHANVIEN nv ,dbo.HOPDONGLAODONG hd 
+ WHERE nv.MaNV = hd.MaNV
 
+ ALTER PROC XoaHDLD (@MaNV varchar(10))AS
+ BEGIN
+ 	DELETE FROM HopDongNhanVien WHERE MaNV = @MaNV
+ END
+ 
  
