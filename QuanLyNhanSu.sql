@@ -186,7 +186,25 @@ BEGIN
 	DELETE dbo.NHANVIEN WHERE MaNV =  @MaNV
 END
 
+-- Proc Trình Độ
+CREATE PROC ThemTD (@MaTDHV varchar(10),@TenTrinhDo nvarchar(50),@ChuyenNganh nvarchar(50))as
+BEGIN
+	 INSERT dbo.TRINHDOHOCVAN
+	         ( MaTDHV, TenTrinhDo, ChuyenNganh )
+	 VALUES  (@MaTDHV,@TenTrinhDo,@ChuyenNganh )
+END
 
+CREATE PROC SuaTD (@MaTDHV varchar(10),@TenTrinhDo nvarchar(50),@ChuyenNganh nvarchar(50))as
+BEGIN
+UPDATE dbo.TRINHDOHOCVAN SET 
+TenTrinhDo =@TenTrinhDo , ChuyenNganh =  @ChuyenNganh 
+ WHERE 	  MaTDHV =@MaTDHV
+END
+
+CREATE PROC XoaTD (@MaTDHV varchar(10))AS
+BEGIN
+	DELETE dbo.TRINHDOHOCVAN WHERE MaTDHV =  @MaTDHV
+END
 --Proc Phong Ban
 CREATE PROC ThemPB(@MaPB VARCHAR(10),@TenPB NVARCHAR(50),@MaTP VARCHAR(10),@DiaChi NVARCHAR(50),@SDT CHAR(15)) AS
 BEGIN
@@ -227,16 +245,3 @@ CREATE PROC XoaHD(@MaHD VARCHAR(10)) AS
  BEGIN
 		DELETE FROM HOPDONGLAODONG WHERE MaHD=@MaHD
  END
- ---
- 
- --Tạo 1 view chứa các thông tin nhân viên và hợp đồng lao động
- CREATE VIEW HopDongNhanVien AS
- SELECT nv.*,hd.LoaiHD,hd.MaHD,hd.LuongThoaThuan FROM dbo.NHANVIEN nv ,dbo.HOPDONGLAODONG hd 
- WHERE nv.MaNV = hd.MaNV
-
- ALTER PROC XoaHDLD (@MaNV varchar(10))AS
- BEGIN
- 	DELETE FROM HopDongNhanVien WHERE MaNV = @MaNV
- END
- 
- 

@@ -133,9 +133,10 @@ namespace QuanLyNS
 
 				lvNhanVien.Items.Add(liv);
 
+				AddNVToDatabase();
+				MessageBox.Show("Thêm Nhân Viên tha`nh công!");
 			}
-			AddNVToDatabase();
-			MessageBox.Show("Thêm Nhân Viên tha`nh công!");
+			
 		}
 		private void btnSua_Click(object sender, EventArgs e)
 		{
@@ -344,10 +345,10 @@ namespace QuanLyNS
 				liv.SubItems.Add(txbCN.Text);
 
 				lvTrinhDo.Items.Add(liv);
-
+				AddTDToDatabase();
+				MessageBox.Show("Thêm thành công!");
 			}
-			AddTDToDatabase();
-			MessageBox.Show("Thêm thành công!");
+			
 		}
 		private void btnSuatd_Click(object sender, EventArgs e)
 		{
@@ -430,7 +431,7 @@ namespace QuanLyNS
 			cmd.Parameters.Add("@TenTrinhDo", SqlDbType.NVarChar).Value = txbTentd.Text;
 			cmd.Parameters.Add("@ChuyenNganh ", SqlDbType.NChar).Value = txbCN.Text;
 			int ret = cmd.ExecuteNonQuery();
-			lvNhanVien.Items.Clear();
+			lvTrinhDo.Items.Clear();
 			if (ret > 0)
 				ShowDataTD();
 		}
