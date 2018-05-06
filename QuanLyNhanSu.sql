@@ -1,6 +1,6 @@
-﻿create database QuanLyNhanSu
+﻿create database QuanLyNhanSu1
 GO
-USE QuanLyNhanSu
+USE QuanLyNhanSu1
 GO
 CREATE TABLE CHUCVU(
 	MaCV VARCHAR(10) primary key,
@@ -173,19 +173,19 @@ BEGIN
 	        ( MaNV ,HoTen , GioiTinh ,SDT , QueQuan , NgaySinh ,MaTDHV ,MaPB)
 	VALUES   ( @MaNV ,@HoTen , @GioiTinh ,@SDT , @QueQuan , @NgaySinh ,@MaTDHV ,@MaPB)
 END
-
+GO
 CREATE PROC SuaNV (@MaNV varchar(10),@HoTen nvarchar(50), @GioiTinh varchar(3),@SDT char(15), @QueQuan nvarchar(50), @NgaySinh date,@MaTDHV varchar(10),@MaPB varchar(10)) AS
 BEGIN
 UPDATE dbo.NHANVIEN SET 
 HoTen =@HoTen , GioiTinh =  @GioiTinh,SDT= @SDT, QueQuan= @QueQuan , NgaySinh = @NgaySinh,MaTDHV= @MaTDHV,MaPB= @MaPB
  WHERE 	  MaNV =@MaNV
 END
-
+GO
 CREATE PROC XoaNV (@MaNV varchar(10))AS
 BEGIN
 	DELETE dbo.NHANVIEN WHERE MaNV =  @MaNV
 END
-
+GO
 -- Proc Trình Độ
 CREATE PROC ThemTD (@MaTDHV varchar(10),@TenTrinhDo nvarchar(50),@ChuyenNganh nvarchar(50))as
 BEGIN
@@ -193,18 +193,19 @@ BEGIN
 	         ( MaTDHV, TenTrinhDo, ChuyenNganh )
 	 VALUES  (@MaTDHV,@TenTrinhDo,@ChuyenNganh )
 END
-
+GO
 CREATE PROC SuaTD (@MaTDHV varchar(10),@TenTrinhDo nvarchar(50),@ChuyenNganh nvarchar(50))as
 BEGIN
 UPDATE dbo.TRINHDOHOCVAN SET 
 TenTrinhDo =@TenTrinhDo , ChuyenNganh =  @ChuyenNganh 
  WHERE 	  MaTDHV =@MaTDHV
 END
-
+GO
 CREATE PROC XoaTD (@MaTDHV varchar(10))AS
 BEGIN
 	DELETE dbo.TRINHDOHOCVAN WHERE MaTDHV =  @MaTDHV
 END
+GO
 --Proc Phong Ban
 CREATE PROC ThemPB(@MaPB VARCHAR(10),@TenPB NVARCHAR(50),@MaTP VARCHAR(10),@DiaChi NVARCHAR(50),@SDT CHAR(15)) AS
 BEGIN
@@ -245,3 +246,4 @@ CREATE PROC XoaHD(@MaHD VARCHAR(10)) AS
  BEGIN
 		DELETE FROM HOPDONGLAODONG WHERE MaHD=@MaHD
  END
+ GO

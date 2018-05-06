@@ -470,10 +470,10 @@ namespace QuanLyNS
 
             while (reader.Read())
             {
-                string mahs = reader.GetString(0);
+                string macv = reader.GetString(0);
                 ListViewItem liv = new ListViewItem(reader.GetString(0));
                 liv.SubItems.Add(reader.GetString(1));
-                list.Add(mahs);
+                list.Add(macv);
                 lvCV.Items.Add(liv);
             }
             reader.Close();
@@ -502,27 +502,47 @@ namespace QuanLyNS
 
         private void btnThemCV_Click(object sender, EventArgs e)
         {
-            if(txbMaCV.Text != "")
+            if (txbMaCV.Text != "")
             {
-                ListViewItem listview = new ListViewItem(txbMaCV.Text);
-                listview.SubItems.Add(txbTenCV.Text);
-                lvCV.Items.Add(listview);
-                AddCV_ToDatabase();
+                foreach (string us in list)
+                {
+                    if (us.Contains(txbMaCV.Text))
+                    {
+                        MessageBox.Show("Mã đã tồn tại!");
+                        check = false;
+                        break;
+                    }
+                    check = true;
+                }
+                if (check == true)
+                {
+
+                    ListViewItem listview = new ListViewItem(txbMaCV.Text);
+                    listview.SubItems.Add(txbTenCV.Text);
+                    lvCV.Items.Add(listview);
+                    AddCV_ToDatabase();
+
+                }
             }
             else
             {
-                MessageBox.Show("Chưa nhập mã chức vụ","Thông báo");
+                MessageBox.Show("Chưa nhập mã chức vụ", "Thông báo");
             }
-          
+            
         }
-
         private void btnSuaCV_Click(object sender, EventArgs e)
         {
-            if (lvCV.SelectedItems.Count == 0) return;
-            ListViewItem listview = lvCV.SelectedItems[0];
-            listview.SubItems[0].Text = txbMaCV.Text;
-            listview.SubItems[1].Text = txbTenCV.Text;
-            UpdateCV_ToDatabase();
+            if (lvCV.SelectedItems.Count == 0)
+            {
+                MessageBox.Show("Chọn chức vụ muốn sửa !", "Thống báo");
+            }
+            else
+            {
+                ListViewItem listview = lvCV.SelectedItems[0];
+                listview.SubItems[0].Text = txbMaCV.Text;
+                listview.SubItems[1].Text = txbTenCV.Text;
+                UpdateCV_ToDatabase();
+            }         
         }
 
         private void btnXoaCV_Click(object sender, EventArgs e)
