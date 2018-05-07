@@ -21,7 +21,7 @@ namespace QuanLyNS
         DataConections dt = new DataConections();
         #region ShowData-ListView-ComboBox
 
-        
+
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtMapb.Enabled = false;
@@ -35,7 +35,7 @@ namespace QuanLyNS
             cbbTP.Text = liv.SubItems[2].Text;
             txtDiaChi.Text = liv.SubItems[3].Text;
             txtSDT.Text = liv.SubItems[4].Text;
-            
+
         }
 
         private void frmPhongBan_Load(object sender, EventArgs e)
@@ -53,15 +53,16 @@ namespace QuanLyNS
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "select * from PHONGBAN";
             cmd.Connection = dt.conn;
-            SqlDataReader reader = cmd.ExecuteReader();            
+            SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                 
+
                 ListViewItem liv = new ListViewItem(reader.GetString(0));
                 liv.SubItems.Add(reader.GetString(1));
-                liv.SubItems.Add(reader.GetString(2));   
+                liv.SubItems.Add(reader.GetString(2));
                 liv.SubItems.Add(reader.GetString(3));
-                liv.SubItems.Add(reader.GetString(4)); 
+                liv.SubItems.Add(reader.GetString(4));
+                lst.Add(reader.GetString(0));
                 lvPB.Items.Add(liv);
             }
             reader.Close();
@@ -86,7 +87,7 @@ namespace QuanLyNS
         }
         string matp = "";
         private void cbbTP_SelectedIndexChanged(object sender, EventArgs e)
-        {           
+        {
             string valuePM = cbbTP.SelectedItem.ToString();
             string[] arrPM = valuePM.Split('-');
             matp = arrPM[0];
@@ -140,7 +141,7 @@ namespace QuanLyNS
             dt.OpenConnection();
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "XoaPB";          
+            cmd.CommandText = "XoaPB";
             cmd.Connection = dt.conn;
 
             cmd.Parameters.Add("@MaPB", SqlDbType.NVarChar).Value = txtMapb.Text;
@@ -156,23 +157,37 @@ namespace QuanLyNS
 
         private void btnThempb_Click(object sender, EventArgs e)
         {
-            ListViewItem liv = new ListViewItem(txtMapb.Text);
-            liv.SubItems.Add(txtTenpb.Text);
-            liv.SubItems.Add(matp);
-            liv.SubItems.Add(txtDiaChi.Text);
-            liv.SubItems.Add(txtSDT.Text);
-            lvPB.Items.Add(liv);
-
-            if (txtMapb.Text == "")
-                MessageBox.Show("Nhập mã phòng ban!");
+            if (txtMapb.Text != "")
+            {
+                bool check = true;
+                foreach (string us in lst)
+                {
+                    if (us.Contains(txtMapb.Text) && txtMapb.Text.Contains(us))
+                    {
+                        MessageBox.Show("Mã phòng ban đã tồn tại!","Thông báo");
+                        check = false;
+                        break;
+                    }
+                    check = true;
+                }
+                if (check == true)
+                {
+                    ListViewItem liv = new ListViewItem(txtMapb.Text);
+                    liv.SubItems.Add(txtTenpb.Text);
+                    liv.SubItems.Add(matp);
+                    liv.SubItems.Add(txtDiaChi.Text);
+                    liv.SubItems.Add(txtSDT.Text);
+                    lvPB.Items.Add(liv);
+                    AddPB_DataBase();
+                    MessageBox.Show("Thêm thành công", "Thêm");
+                }
+            }
             else
             {
-                AddPB_DataBase();
-                MessageBox.Show("Thêm thành công");
+                MessageBox.Show("Chưa nhập mã phòng ban", "Thông báo");
             }
-
         }
-
+    
         private void btnSuapb_Click(object sender, EventArgs e)
         {
             btnThempb.Enabled = true;
@@ -184,7 +199,7 @@ namespace QuanLyNS
             liv.SubItems[3].Text = txtDiaChi.Text;
             liv.SubItems[4].Text = txtSDT.Text;
             repairPB_Database();
-            MessageBox.Show("Đã sửa thành công");
+            MessageBox.Show("Đã sửa thành công","Sửa");
         }
 
         private void btnXoapb_Click(object sender, EventArgs e)
@@ -201,7 +216,7 @@ namespace QuanLyNS
                 }
             }
             DeletePB_Database();
-            MessageBox.Show("Đã xoá thành công");
+            MessageBox.Show("Đã xoá thành công","Xoá");
         }
 
         private void btnRspb_Click(object sender, EventArgs e)
@@ -218,7 +233,6 @@ namespace QuanLyNS
             txtSDT.ResetText();
         }
         #endregion
-
 
     }
 }

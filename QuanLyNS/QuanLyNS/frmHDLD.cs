@@ -155,7 +155,7 @@ namespace QuanLyNS
         #region Control
         private void btnThem_Click(object sender, EventArgs e)
         {
-            ListViewItem liv = new ListViewItem(txtMaHD.Text);
+            /*ListViewItem liv = new ListViewItem(txtMaHD.Text);
             liv.SubItems.Add(txtLoaiHD.Text);
             liv.SubItems.Add(txtLuong.Text);
             liv.SubItems.Add(manv);            
@@ -171,30 +171,64 @@ namespace QuanLyNS
                     if (txtLuong.Text == "")
                         txtLuong.Text = "0";
                     AddHD_DataBase();
-                    MessageBox.Show("Đã sửa thành công");
+                    MessageBox.Show("Đã thêm thành công");
                 }
+            }*/
+            if (txtMaHD.Text != "")
+            {
+                bool check = true;
+                foreach (string us in lst)
+                {
+                    if (us.Contains(txtMaHD.Text) && txtMaHD.Text.Contains(us))
+                    {
+                        MessageBox.Show("Mã HDLD đã tồn tại!","Thông báo");
+                        check = false;
+                        break;
+                    }
+                    check = true;
+                }
+                if (cbbMaNV.Text == "")
+                {
+                    MessageBox.Show("Chưa nhập mã nhân viên", "Thông báo");
+                    check = false;                    
+                }
+                if (check == true)
+                {
+                    ListViewItem liv = new ListViewItem(txtMaHD.Text);
+                    liv.SubItems.Add(txtLoaiHD.Text);
+                    liv.SubItems.Add(txtLuong.Text);
+                    liv.SubItems.Add(manv);
+                    lvHDLD.Items.Add(liv);
+                    AddHD_DataBase();
+                    MessageBox.Show("Thêm thành công", "Thêm");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chưa nhập mã HDLD","Thông báo");
             }
         }
         
         private void btnSua_Click(object sender, EventArgs e)
         {
-            btnThem.Enabled = true;
-            if (lvHDLD.SelectedItems.Count == 0) return;
-            ListViewItem liv = lvHDLD.SelectedItems[0];
-            liv.SubItems[0].Text = txtMaHD.Text;
-            liv.SubItems[1].Text = txtLoaiHD.Text;
-            liv.SubItems[2].Text = cbbMaNV.Text;
-            liv.SubItems[3].Text = txtLuong.Text;
+            
             if (cbbMaNV.Text == "")
             {
-                MessageBox.Show("Nhập mã nhân viên");
+                MessageBox.Show("Nhập mã nhân viên","Thông báo");
             }
             else
             {
                 if (txtLuong.Text == "")
                     txtLuong.Text = "0";
+                btnThem.Enabled = true;
+                if (lvHDLD.SelectedItems.Count == 0) return;
+                ListViewItem liv = lvHDLD.SelectedItems[0];
+                liv.SubItems[0].Text = txtMaHD.Text;
+                liv.SubItems[1].Text = txtLoaiHD.Text;
+                liv.SubItems[2].Text = cbbMaNV.Text;
+                liv.SubItems[3].Text = txtLuong.Text;
                 RepairHD_Database();
-                MessageBox.Show("Đã sửa thành công");
+                MessageBox.Show("Đã sửa thành công","Sửa");
             }
         }
 
@@ -212,7 +246,7 @@ namespace QuanLyNS
                 }
             }
             DeleteHD_Database();
-            MessageBox.Show("Đã xoá thành công");
+            MessageBox.Show("Đã xoá thành công","Xoá");
         }
 
         private void btnReset_Click(object sender, EventArgs e)

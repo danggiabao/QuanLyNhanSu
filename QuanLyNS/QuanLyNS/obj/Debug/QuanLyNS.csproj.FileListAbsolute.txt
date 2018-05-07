@@ -91,3 +91,17 @@ C:\Users\dangt\Desktop\KTCN\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.cs
 C:\Users\dangt\Desktop\KTCN\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.csproj.CoreCompileInputs.cache
 C:\Users\dangt\Desktop\KTCN\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.exe
 C:\Users\dangt\Desktop\KTCN\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.pdb
+C:\Users\Hung Ngo\Desktop\TTN2 6-5\QuanLyNhanSu\QuanLyNS\QuanLyNS\bin\Debug\QuanLyNS.exe.config
+C:\Users\Hung Ngo\Desktop\TTN2 6-5\QuanLyNhanSu\QuanLyNS\QuanLyNS\bin\Debug\QuanLyNS.exe
+C:\Users\Hung Ngo\Desktop\TTN2 6-5\QuanLyNhanSu\QuanLyNS\QuanLyNS\bin\Debug\QuanLyNS.pdb
+C:\Users\Hung Ngo\Desktop\TTN2 6-5\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.csprojResolveAssemblyReference.cache
+C:\Users\Hung Ngo\Desktop\TTN2 6-5\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmHDLD.resources
+C:\Users\Hung Ngo\Desktop\TTN2 6-5\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmLogin.resources
+C:\Users\Hung Ngo\Desktop\TTN2 6-5\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmNhanVien.resources
+C:\Users\Hung Ngo\Desktop\TTN2 6-5\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmPhongBan.resources
+C:\Users\Hung Ngo\Desktop\TTN2 6-5\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.frmTrangChu.resources
+C:\Users\Hung Ngo\Desktop\TTN2 6-5\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.Properties.Resources.resources
+C:\Users\Hung Ngo\Desktop\TTN2 6-5\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.csproj.GenerateResource.cache
+C:\Users\Hung Ngo\Desktop\TTN2 6-5\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.csproj.CoreCompileInputs.cache
+C:\Users\Hung Ngo\Desktop\TTN2 6-5\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.exe
+C:\Users\Hung Ngo\Desktop\TTN2 6-5\QuanLyNhanSu\QuanLyNS\QuanLyNS\obj\Debug\QuanLyNS.pdb
