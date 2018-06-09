@@ -624,15 +624,6 @@ namespace QuanLyNS
             MessageBox.Show("Xóa thành công!");
 
         }
-
-
-
-
-
-
-
-
-
         #endregion
 
         #region TimKiem_NhanVien
@@ -844,6 +835,54 @@ namespace QuanLyNS
             }
         }
         #endregion
+
+        #region TimKiem_ChucVu
+
+        private void btnTimKiemCV_Click(object sender, EventArgs e)
+        {
+            if (cbbTKCV.SelectedIndex == 0)
+            {
+                string str = txtTimKiemCV.Text;
+                dt.OpenConnection();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from CHUCVU Where MaCV like '%" + str + "%'";
+                cmd.Connection = dt.conn;
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                lvCV.Items.Clear();
+                while (reader.Read())
+                {
+                    string macv = reader.GetString(0);
+                    ListViewItem liv = new ListViewItem(reader.GetString(0));
+                    liv.SubItems.Add(reader.GetString(1));
+                    lvCV.Items.Add(liv);
+                }
+                reader.Close();
+            }
+            else if (cbbTKCV.SelectedIndex == 1)
+            {
+                string str = txtTimKiemCV.Text;
+                dt.OpenConnection();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from CHUCVU Where TenCV like '%" + str + "%'";
+                cmd.Connection = dt.conn;
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                lvCV.Items.Clear();
+                while (reader.Read())
+                {
+                    string macv = reader.GetString(0);
+                    ListViewItem liv = new ListViewItem(reader.GetString(0));
+                    liv.SubItems.Add(reader.GetString(1));
+                    lvCV.Items.Add(liv);
+                }
+                reader.Close();
+            }
+        }
+        #endregion
+
 
     }
 }

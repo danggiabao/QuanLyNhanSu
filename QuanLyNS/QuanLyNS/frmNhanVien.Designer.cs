@@ -96,6 +96,9 @@
             this.btnTimKiemNV = new System.Windows.Forms.Button();
             this.txtTimKiemNV = new System.Windows.Forms.TextBox();
             this.cbbTKNV = new System.Windows.Forms.ComboBox();
+            this.txtTimKiemCV = new System.Windows.Forms.TextBox();
+            this.cbbTKCV = new System.Windows.Forms.ComboBox();
+            this.btnTimKiemCV = new System.Windows.Forms.Button();
             this.tabControl2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -514,6 +517,9 @@
             // splitContainer3.Panel1
             // 
             this.splitContainer3.Panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.splitContainer3.Panel1.Controls.Add(this.btnTimKiemCV);
+            this.splitContainer3.Panel1.Controls.Add(this.cbbTKCV);
+            this.splitContainer3.Panel1.Controls.Add(this.txtTimKiemCV);
             this.splitContainer3.Panel1.Controls.Add(this.btnRsCV);
             this.splitContainer3.Panel1.Controls.Add(this.btnXoaCV);
             this.splitContainer3.Panel1.Controls.Add(this.btnSuaCV);
@@ -887,6 +893,34 @@
             this.cbbTKNV.Size = new System.Drawing.Size(156, 21);
             this.cbbTKNV.TabIndex = 23;
             // 
+            // txtTimKiemCV
+            // 
+            this.txtTimKiemCV.Location = new System.Drawing.Point(32, 352);
+            this.txtTimKiemCV.Name = "txtTimKiemCV";
+            this.txtTimKiemCV.Size = new System.Drawing.Size(134, 20);
+            this.txtTimKiemCV.TabIndex = 23;
+            // 
+            // cbbTKCV
+            // 
+            this.cbbTKCV.FormattingEnabled = true;
+            this.cbbTKCV.Items.AddRange(new object[] {
+            "Theo Mã Chức Vụ",
+            "Theo Tên Chức Vụ"});
+            this.cbbTKCV.Location = new System.Drawing.Point(32, 400);
+            this.cbbTKCV.Name = "cbbTKCV";
+            this.cbbTKCV.Size = new System.Drawing.Size(160, 21);
+            this.cbbTKCV.TabIndex = 24;
+            // 
+            // btnTimKiemCV
+            // 
+            this.btnTimKiemCV.Location = new System.Drawing.Point(32, 447);
+            this.btnTimKiemCV.Name = "btnTimKiemCV";
+            this.btnTimKiemCV.Size = new System.Drawing.Size(75, 23);
+            this.btnTimKiemCV.TabIndex = 25;
+            this.btnTimKiemCV.Text = "Tìm Kiếm";
+            this.btnTimKiemCV.UseVisualStyleBackColor = true;
+            this.btnTimKiemCV.Click += new System.EventHandler(this.btnTimKiemCV_Click);
+            // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -994,5 +1028,8 @@
         private System.Windows.Forms.ComboBox cbbTKNV;
         private System.Windows.Forms.TextBox txtTimKiemNV;
         private System.Windows.Forms.Button btnTimKiemNV;
+        private System.Windows.Forms.Button btnTimKiemCV;
+        private System.Windows.Forms.ComboBox cbbTKCV;
+        private System.Windows.Forms.TextBox txtTimKiemCV;
     }
 }
