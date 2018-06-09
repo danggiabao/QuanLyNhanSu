@@ -883,6 +883,85 @@ namespace QuanLyNS
         }
         #endregion
 
+        #region TimKiem_TrinhDo
+
+        private void btnTimKiemTD_Click(object sender, EventArgs e)
+        {
+            if (cbbTKTD.SelectedIndex == 0)
+            {
+                string str = txtTimKiemTD.Text;
+                dt.OpenConnection();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from TRINHDOHOCVAN Where MaTDHV like '%" + str + "%'";
+                cmd.Connection = dt.conn;
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                lvTrinhDo.Items.Clear();
+                while (reader.Read())
+                {
+                    string MaTD = reader.GetString(0);
+                    ListViewItem liv = new ListViewItem(reader.GetString(0));
+                    liv.SubItems.Add(reader.GetString(1));
+                    liv.SubItems.Add(reader.GetString(2));
+
+                    LstMaTD.Add(MaTD);
+                    lvTrinhDo.Items.Add(liv);
+                }
+                reader.Close();
+
+            }
+            else if (cbbTKTD.SelectedIndex == 1)
+            {
+                string str = txtTimKiemTD.Text;
+                dt.OpenConnection();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from TRINHDOHOCVAN Where TenTrinhDo like '%" + str + "%'";
+                cmd.Connection = dt.conn;
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                lvTrinhDo.Items.Clear();
+                while (reader.Read())
+                {
+                    string MaTD = reader.GetString(0);
+                    ListViewItem liv = new ListViewItem(reader.GetString(0));
+                    liv.SubItems.Add(reader.GetString(1));
+                    liv.SubItems.Add(reader.GetString(2));
+
+
+                    lvTrinhDo.Items.Add(liv);
+                }
+                reader.Close();
+
+            }
+            else if (cbbTKTD.SelectedIndex == 2)
+            {
+                string str = txtTimKiemTD.Text;
+                dt.OpenConnection();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from TRINHDOHOCVAN Where ChuyenNganh like '%" + str + "%'";
+                cmd.Connection = dt.conn;
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                lvTrinhDo.Items.Clear();
+                while (reader.Read())
+                {
+                    string MaTD = reader.GetString(0);
+                    ListViewItem liv = new ListViewItem(reader.GetString(0));
+                    liv.SubItems.Add(reader.GetString(1));
+                    liv.SubItems.Add(reader.GetString(2));
+
+
+                    lvTrinhDo.Items.Add(liv);
+                }
+                reader.Close();
+
+            }
+        }
+        #endregion
+
 
     }
 }
