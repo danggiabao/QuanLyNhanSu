@@ -21,8 +21,18 @@ namespace QuanLyNS
 			cbTrinhDo();
 			ShowDataCV();
 			ShowDataTD();
+            //TK_NV
+            txtTimKiemNV.ForeColor = Color.LightGray;
+            txtTimKiemNV.Text = "Tìm kiếm";
+            this.txtTimKiemNV.Leave += new System.EventHandler(this.txtTimKiemNV_Leave);
+            this.txtTimKiemNV.Enter += new System.EventHandler(this.txtTimKiemNV_Enter);
 
-		}
+            cbbTKNV.ForeColor = Color.LightGray;
+            cbbTKNV.Text = "Tìm kiếm theo";
+            this.cbbTKNV.Leave += new System.EventHandler(this.cbbTKNV_Leave);
+            this.cbbTKNV.Enter += new System.EventHandler(this.cbbTKNV_Enter);
+
+        }
 		DataConections dt = new DataConections();
 		bool check = true;
 		List<string> LstMaNV = new List<string>();
@@ -621,8 +631,219 @@ namespace QuanLyNS
 
 
 
-		#endregion
 
-		
-	}
+
+        #endregion
+
+        #region TimKiem_NhanVien
+
+        private void txtTimKiemNV_Leave(object sender, EventArgs e)
+        {
+            if (txtTimKiemNV.Text == "")
+            {
+                txtTimKiemNV.Text = "Tìm kiếm";
+                txtTimKiemNV.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtTimKiemNV_Enter(object sender, EventArgs e)
+        {
+            if (txtTimKiemNV.Text == "Tìm kiếm")
+            {
+                txtTimKiemNV.Text = "";
+                txtTimKiemNV.ForeColor = Color.Black;
+            }
+        }
+
+        private void btnTimKiemNV_Click(object sender, EventArgs e)
+        {
+            if (cbbTKNV.SelectedIndex == 0)
+            {
+                string str = txtTimKiemNV.Text;
+                dt.OpenConnection();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from NHANVIEN Where MaNV like '%" + str + "%'";
+                cmd.Connection = dt.conn;
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                lvNhanVien.Items.Clear();
+                while (reader.Read())
+                {
+                   
+                    ListViewItem liv = new ListViewItem(reader.GetString(0));
+                    liv.SubItems.Add(reader.GetString(1));
+                    liv.SubItems.Add(reader.GetString(2));
+                    liv.SubItems.Add(reader.GetString(3));
+                    liv.SubItems.Add(reader.GetString(4));
+                    liv.SubItems.Add(reader.GetDateTime(5).ToString());
+                    liv.SubItems.Add(reader.GetString(6));
+                    liv.SubItems.Add(reader.GetString(7));
+
+                    
+                   lvNhanVien.Items.Add(liv);
+                }
+                reader.Close();
+            }
+            else if (cbbTKNV.SelectedIndex == 1)
+            {
+                string str = txtTimKiemNV.Text;
+                dt.OpenConnection();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from NHANVIEN Where HoTen like '%" + str + "%'";
+                cmd.Connection = dt.conn;
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                lvNhanVien.Items.Clear();
+                while (reader.Read())
+                {
+                    
+                    ListViewItem liv = new ListViewItem(reader.GetString(0));
+                    liv.SubItems.Add(reader.GetString(1));
+                    liv.SubItems.Add(reader.GetString(2));
+                    liv.SubItems.Add(reader.GetString(3));
+                    liv.SubItems.Add(reader.GetString(4));
+                    liv.SubItems.Add(reader.GetDateTime(5).ToString());
+                    liv.SubItems.Add(reader.GetString(6));
+                    liv.SubItems.Add(reader.GetString(7));
+
+                    
+                    lvNhanVien.Items.Add(liv);
+                }
+                reader.Close();
+            }
+            else if (cbbTKNV.SelectedIndex == 2)
+            {
+                string str = txtTimKiemNV.Text;
+                dt.OpenConnection();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from NHANVIEN Where SDT like '%" + str + "%'";
+                cmd.Connection = dt.conn;
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                lvNhanVien.Items.Clear();
+                while (reader.Read())
+                {
+                    
+                    ListViewItem liv = new ListViewItem(reader.GetString(0));
+                    liv.SubItems.Add(reader.GetString(1));
+                    liv.SubItems.Add(reader.GetString(2));
+                    liv.SubItems.Add(reader.GetString(3));
+                    liv.SubItems.Add(reader.GetString(4));
+                    liv.SubItems.Add(reader.GetDateTime(5).ToString());
+                    liv.SubItems.Add(reader.GetString(6));
+                    liv.SubItems.Add(reader.GetString(7));
+
+                   
+                    lvNhanVien.Items.Add(liv);
+                }
+                reader.Close();
+            }
+            else if (cbbTKNV.SelectedIndex == 3)
+            {
+                string str = txtTimKiemNV.Text;
+                dt.OpenConnection();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from NHANVIEN Where QueQuan like '%" + str + "%'";
+                cmd.Connection = dt.conn;
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                lvNhanVien.Items.Clear();
+                while (reader.Read())
+                {
+                    
+                    ListViewItem liv = new ListViewItem(reader.GetString(0));
+                    liv.SubItems.Add(reader.GetString(1));
+                    liv.SubItems.Add(reader.GetString(2));
+                    liv.SubItems.Add(reader.GetString(3));
+                    liv.SubItems.Add(reader.GetString(4));
+                    liv.SubItems.Add(reader.GetDateTime(5).ToString());
+                    liv.SubItems.Add(reader.GetString(6));
+                    liv.SubItems.Add(reader.GetString(7));
+
+                    
+                    lvNhanVien.Items.Add(liv);
+                }
+                reader.Close();
+            }
+            else if (cbbTKNV.SelectedIndex == 4)
+            {
+                string str = txtTimKiemNV.Text;
+                dt.OpenConnection();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from NHANVIEN Where NgaySinh like '%" + str + "%'";
+                cmd.Connection = dt.conn;
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                lvNhanVien.Items.Clear();
+                while (reader.Read())
+                {
+                    
+                    ListViewItem liv = new ListViewItem(reader.GetString(0));
+                    liv.SubItems.Add(reader.GetString(1));
+                    liv.SubItems.Add(reader.GetString(2));
+                    liv.SubItems.Add(reader.GetString(3));
+                    liv.SubItems.Add(reader.GetString(4));
+                    liv.SubItems.Add(reader.GetDateTime(5).ToString());
+                    liv.SubItems.Add(reader.GetString(6));
+                    liv.SubItems.Add(reader.GetString(7));
+                    
+                    lvNhanVien.Items.Add(liv);
+                }
+                reader.Close();
+            }
+            else if (cbbTKNV.SelectedIndex == 5)
+            {
+                string str = txtTimKiemNV.Text;
+                dt.OpenConnection();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from NHANVIEN Where MaPB like '%" + str + "%'";
+                cmd.Connection = dt.conn;
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                lvNhanVien.Items.Clear();
+                while (reader.Read())
+                {
+                    
+                    ListViewItem liv = new ListViewItem(reader.GetString(0));
+                    liv.SubItems.Add(reader.GetString(1));
+                    liv.SubItems.Add(reader.GetString(2));
+                    liv.SubItems.Add(reader.GetString(3));
+                    liv.SubItems.Add(reader.GetString(4));
+                    liv.SubItems.Add(reader.GetDateTime(5).ToString());
+                    liv.SubItems.Add(reader.GetString(6));
+                    liv.SubItems.Add(reader.GetString(7));
+
+                    
+                    lvNhanVien.Items.Add(liv);
+                }
+                reader.Close();
+            }
+        }
+
+        private void cbbTKNV_Enter(object sender, EventArgs e)
+        {
+            if (cbbTKNV.Text == "Tìm kiếm theo")
+            {
+                cbbTKNV.Text = "";
+                cbbTKNV.ForeColor = Color.Black;
+            }
+        }
+
+        private void cbbTKNV_Leave(object sender, EventArgs e)
+        {
+            if (cbbTKNV.Text == "")
+            {
+                cbbTKNV.Text = "Tìm kiếm theo";
+                cbbTKNV.ForeColor = Color.Gray;
+            }
+        }
+        #endregion
+
+    }
 }
