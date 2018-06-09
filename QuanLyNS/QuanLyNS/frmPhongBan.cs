@@ -234,5 +234,106 @@ namespace QuanLyNS
         }
         #endregion
 
+        #region TimKiem_PhongBan
+        private void btnTimKiemPB_Click(object sender, EventArgs e)
+        {
+            if (cbbTKPB.SelectedIndex == 0)
+            {
+                string str = txtTimKiemPB.Text;
+                dt.OpenConnection();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from PHONGBAN Where MaPB like '%" + str + "%'";
+                cmd.Connection = dt.conn;
+                SqlDataReader reader = cmd.ExecuteReader();
+                lvPB.Items.Clear();
+                while (reader.Read())
+                {
+
+                    ListViewItem liv = new ListViewItem(reader.GetString(0));
+                    liv.SubItems.Add(reader.GetString(1));
+                    liv.SubItems.Add(reader.GetString(2));
+                    liv.SubItems.Add(reader.GetString(3));
+                    liv.SubItems.Add(reader.GetString(4));
+                    lst.Add(reader.GetString(0));
+                    lvPB.Items.Add(liv);
+                }
+                reader.Close();
+
+            }
+            else if (cbbTKPB.SelectedIndex == 1)
+            {
+                string str = txtTimKiemPB.Text;
+                dt.OpenConnection();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from PHONGBAN Where TenPB like '%" + str + "%'";
+                cmd.Connection = dt.conn;
+                SqlDataReader reader = cmd.ExecuteReader();
+                lvPB.Items.Clear();
+                while (reader.Read())
+                {
+
+                    ListViewItem liv = new ListViewItem(reader.GetString(0));
+                    liv.SubItems.Add(reader.GetString(1));
+                    liv.SubItems.Add(reader.GetString(2));
+                    liv.SubItems.Add(reader.GetString(3));
+                    liv.SubItems.Add(reader.GetString(4));
+                    lst.Add(reader.GetString(0));
+                    lvPB.Items.Add(liv);
+                }
+                reader.Close();
+
+            }
+            else if (cbbTKPB.SelectedIndex == 2)
+            {
+                string str = txtTimKiemPB.Text;
+                dt.OpenConnection();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from PHONGBAN Where MaTP like '%" + str + "%'";
+                cmd.Connection = dt.conn;
+                SqlDataReader reader = cmd.ExecuteReader();
+                lvPB.Items.Clear();
+                while (reader.Read())
+                {
+
+                    ListViewItem liv = new ListViewItem(reader.GetString(0));
+                    liv.SubItems.Add(reader.GetString(1));
+                    liv.SubItems.Add(reader.GetString(2));
+                    liv.SubItems.Add(reader.GetString(3));
+                    liv.SubItems.Add(reader.GetString(4));
+                    lst.Add(reader.GetString(0));
+                    lvPB.Items.Add(liv);
+                }
+                reader.Close();
+
+            }
+            else if (cbbTKPB.SelectedIndex == 3)
+            {
+                string str = txtTimKiemPB.Text;
+                dt.OpenConnection();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from PHONGBAN Where SDT like '%" + str + "%'";
+                cmd.Connection = dt.conn;
+                SqlDataReader reader = cmd.ExecuteReader();
+                lvPB.Items.Clear();
+                while (reader.Read())
+                {
+
+                    ListViewItem liv = new ListViewItem(reader.GetString(0));
+                    liv.SubItems.Add(reader.GetString(1));
+                    liv.SubItems.Add(reader.GetString(2));
+                    liv.SubItems.Add(reader.GetString(3));
+                    liv.SubItems.Add(reader.GetString(4));
+                    lst.Add(reader.GetString(0));
+                    lvPB.Items.Add(liv);
+                }
+                reader.Close();
+
+            }
+        }
+        #endregion
     }
 }
