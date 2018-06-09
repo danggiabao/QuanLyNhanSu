@@ -263,5 +263,83 @@ namespace QuanLyNS
             
         }
         #endregion
+
+        #region TimKiem_HDLD
+        private void btnTimKiemHDLD_Click(object sender, EventArgs e)
+        {
+            if (cbbTKHDLD.SelectedIndex == 0)
+            {
+                string str = txtTimKiemHDLD.Text;
+                dt.OpenConnection();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from HOPDONGLAODONG Where MaHD like '%" + str + "%'";
+                cmd.Connection = dt.conn;
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                lvHDLD.Items.Clear();
+                while (reader.Read())
+                {
+                    string mahdld = reader.GetString(0);
+                    ListViewItem liv = new ListViewItem(reader.GetString(0));
+                    liv.SubItems.Add(reader.GetString(1));
+                    liv.SubItems.Add(reader.GetInt64(2).ToString());
+                    liv.SubItems.Add(reader.GetString(3));
+ 
+                    lvHDLD.Items.Add(liv);
+                }
+                reader.Close();
+
+            }
+            else if (cbbTKHDLD.SelectedIndex == 1)
+            {
+                string str = txtTimKiemHDLD.Text;
+                dt.OpenConnection();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from HOPDONGLAODONG Where LoaiHD like '%" + str + "%'";
+                cmd.Connection = dt.conn;
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                lvHDLD.Items.Clear();
+                while (reader.Read())
+                {
+                    string mahdld = reader.GetString(0);
+                    ListViewItem liv = new ListViewItem(reader.GetString(0));
+                    liv.SubItems.Add(reader.GetString(1));
+                    liv.SubItems.Add(reader.GetInt64(2).ToString());
+                    liv.SubItems.Add(reader.GetString(3));
+
+                    lvHDLD.Items.Add(liv);
+                }
+                reader.Close();
+
+            }
+            else if (cbbTKHDLD.SelectedIndex == 2)
+            {
+                string str = txtTimKiemHDLD.Text;
+                dt.OpenConnection();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from HOPDONGLAODONG Where MaNV like '%" + str + "%'";
+                cmd.Connection = dt.conn;
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                lvHDLD.Items.Clear();
+                while (reader.Read())
+                {
+                    string mahdld = reader.GetString(0);
+                    ListViewItem liv = new ListViewItem(reader.GetString(0));
+                    liv.SubItems.Add(reader.GetString(1));
+                    liv.SubItems.Add(reader.GetInt64(2).ToString());
+                    liv.SubItems.Add(reader.GetString(3));
+
+                    lvHDLD.Items.Add(liv);
+                }
+                reader.Close();
+
+            }
+        }
+        #endregion
     }
 }

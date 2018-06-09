@@ -47,6 +47,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtTimKiemHDLD = new System.Windows.Forms.TextBox();
+            this.cbbTKHDLD = new System.Windows.Forms.ComboBox();
+            this.btnTimKiemHDLD = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -69,6 +72,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.splitContainer1.Panel2.Controls.Add(this.btnTimKiemHDLD);
+            this.splitContainer1.Panel2.Controls.Add(this.cbbTKHDLD);
+            this.splitContainer1.Panel2.Controls.Add(this.txtTimKiemHDLD);
             this.splitContainer1.Panel2.Controls.Add(this.cbbMaNV);
             this.splitContainer1.Panel2.Controls.Add(this.btnReset);
             this.splitContainer1.Panel2.Controls.Add(this.btnXoa);
@@ -267,6 +273,35 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Mã hợp đồng";
             // 
+            // txtTimKiemHDLD
+            // 
+            this.txtTimKiemHDLD.Location = new System.Drawing.Point(197, 110);
+            this.txtTimKiemHDLD.Name = "txtTimKiemHDLD";
+            this.txtTimKiemHDLD.Size = new System.Drawing.Size(156, 20);
+            this.txtTimKiemHDLD.TabIndex = 23;
+            // 
+            // cbbTKHDLD
+            // 
+            this.cbbTKHDLD.FormattingEnabled = true;
+            this.cbbTKHDLD.Items.AddRange(new object[] {
+            "Theo Mã Hợp Đồng ",
+            "Theo Loại Hợp Đồng",
+            "Theo Mã Nhân Viên "});
+            this.cbbTKHDLD.Location = new System.Drawing.Point(375, 109);
+            this.cbbTKHDLD.Name = "cbbTKHDLD";
+            this.cbbTKHDLD.Size = new System.Drawing.Size(160, 21);
+            this.cbbTKHDLD.TabIndex = 24;
+            // 
+            // btnTimKiemHDLD
+            // 
+            this.btnTimKiemHDLD.Location = new System.Drawing.Point(561, 106);
+            this.btnTimKiemHDLD.Name = "btnTimKiemHDLD";
+            this.btnTimKiemHDLD.Size = new System.Drawing.Size(75, 23);
+            this.btnTimKiemHDLD.TabIndex = 25;
+            this.btnTimKiemHDLD.Text = "Tìm Kiếm";
+            this.btnTimKiemHDLD.UseVisualStyleBackColor = true;
+            this.btnTimKiemHDLD.Click += new System.EventHandler(this.btnTimKiemHDLD_Click);
+            // 
             // frmHDLD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,5 +344,8 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.ComboBox cbbMaNV;
+        private System.Windows.Forms.Button btnTimKiemHDLD;
+        private System.Windows.Forms.ComboBox cbbTKHDLD;
+        private System.Windows.Forms.TextBox txtTimKiemHDLD;
     }
 }
